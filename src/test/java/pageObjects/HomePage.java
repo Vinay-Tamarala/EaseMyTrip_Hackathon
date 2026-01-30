@@ -24,10 +24,19 @@ public class HomePage {
     @FindBy(xpath = "//span[text()='Gift Card']")
     private WebElement giftCardLink;
 
+    @FindBy(xpath = "//span[@class=\"meuicowidth hotelmenuico\"]")
+    WebElement hotels;
+
+
     public void navigateToGiftCard() {
         Actions actions = new Actions(driver);
         wait.until(ExpectedConditions.visibilityOf(moreButton));
         actions.moveToElement(moreButton).perform();
         wait.until(ExpectedConditions.elementToBeClickable(giftCardLink)).click();
     }
+    //hotels
+    public void navigateToHotels(){
+       hotels.click();
+    }
+
 }
