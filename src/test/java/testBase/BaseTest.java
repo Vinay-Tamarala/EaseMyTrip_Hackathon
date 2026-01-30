@@ -7,10 +7,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import pageObjects.HotelsPage;
+import pageObjects.*;
 import utilities.ConfigReader;
-import pageObjects.HomePage;
-import pageObjects.GiftCardPage;
 
 import java.time.Duration;
 
@@ -20,6 +18,10 @@ public class BaseTest {
     protected HomePage homePage;
     protected GiftCardPage giftCardPage;
     protected HotelsPage hotelsPage;
+    public FlightPage flightLocators;
+    public CheckOutPage checkLocators;
+    public PayPage payLocators;
+
     @BeforeClass
     public void setUp() {
         String browser = ConfigReader.getProperty("browser").toLowerCase();
@@ -48,6 +50,9 @@ public class BaseTest {
         homePage = new HomePage(driver, wait);
         giftCardPage = new GiftCardPage(driver, wait);
         hotelsPage= new HotelsPage(driver,wait);
+        flightLocators = new FlightPage(driver);
+        checkLocators = new CheckOutPage(driver,wait);
+        payLocators = new PayPage(driver);
 
         System.out.println("Running tests on: " + browser.toUpperCase());
     }
