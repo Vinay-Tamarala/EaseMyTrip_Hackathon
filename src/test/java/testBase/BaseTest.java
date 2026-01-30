@@ -21,6 +21,8 @@ public class BaseTest {
     public FlightPage flightLocators;
     public CheckOutPage checkLocators;
     public PayPage payLocators;
+    protected Home homePageVc;
+    protected FlightsPage flights;
 
     @BeforeClass
     public void setUp() {
@@ -50,9 +52,11 @@ public class BaseTest {
         homePage = new HomePage(driver, wait);
         giftCardPage = new GiftCardPage(driver, wait);
         hotelsPage= new HotelsPage(driver,wait);
-        flightLocators = new FlightPage(driver);
+        flightLocators = new FlightPage(driver,wait);
         checkLocators = new CheckOutPage(driver,wait);
         payLocators = new PayPage(driver);
+        homePageVc = new Home(driver);
+        flights = new FlightsPage(driver);
 
         System.out.println("Running tests on: " + browser.toUpperCase());
     }

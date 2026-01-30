@@ -1,6 +1,8 @@
 package pageObjects;
 
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -53,6 +55,9 @@ public class CheckOutPage extends BasePage {
     @FindBy(xpath="//*[@id='spnTransaction']/span")
     WebElement continueBtn;
 
+    @FindBy(xpath="//a[@id='skipPop']")
+    WebElement skip;
+
     public void selectInsurance(){
      cc.scrollIntoView(insurance);
      if(ConfigReader.getProperty("insurance").equals("yes"))
@@ -76,8 +81,17 @@ public class CheckOutPage extends BasePage {
     public void enterContactDetails(){
       contactEmail.sendKeys(ConfigReader.getProperty("email"));
       contactNumber.sendKeys(ConfigReader.getProperty("Number"));
-      wait.until(ExpectedConditions.elementToBeClickable(continueBtn));
-      cc.clickElement(continueBtn);
+      try {
+          wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='spnTransactionbtnLoader']")));
+//          wait.until(ExpectedConditions.elementToBeClickable(continueBtn));
+          cc.clickElement(continueBtn);
+      }
+      catch(TimeoutException e) {
+          cc.clickElement(continueBtn);
+          cc.clickElement(driver.findElement(By.xpath("//a[@class='conf_btn']")));
+          cc.clickElement(skip);
+//          cc.clickElement(continueBtn);
+      }
     }
 
 

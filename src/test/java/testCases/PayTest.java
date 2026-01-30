@@ -7,6 +7,7 @@ public class PayTest extends BaseTest {
     @Test
     public void payCases() {
 
+        flights.addTravelDetails("Delhi","Mumbai");
         flightLocators.selectFilter();
         flightLocators.selectFlight();
         flightLocators.selectType();

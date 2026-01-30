@@ -4,14 +4,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.CommonCode;
 import utilities.ConfigReader;
 
 import java.util.List;
 
 public class FlightPage extends BasePage{
-    public FlightPage(WebDriver driver){
+    WebDriverWait wait;
+    public FlightPage(WebDriver driver, WebDriverWait wait){
         super(driver);
+        this.wait=wait;
     }
 
     CommonCode cc=new CommonCode(driver);
@@ -23,9 +26,9 @@ public class FlightPage extends BasePage{
     public List<WebElement> prices;
 
     public void selectFilter(){
-        WebElement airlineFilter=driver.findElement(By.xpath("//h5[@class='prc_ttl2' and contains(text(),'Airlines')]//following::div[label/span[normalize-space(text())='"+ ConfigReader.getProperty("Airline")+"'] and p[@class='aln_prc']]//input[@type='checkbox']"));
+        WebElement airlineFilter=driver.findElement(By.xpath("//h5[@class='prc_ttl2' and text()='Airlines']"));
         cc.scrollIntoView(airlineFilter);
-        airlineFilter.click();
+        cc.clickElement(driver.findElement(By.xpath("//h5[@class='prc_ttl2' and text()='Airlines']//following::div[label/span[normalize-space(text())='"+ ConfigReader.getProperty("Airline")+"'] and p[@class='aln_prc']]//input[@type='checkbox']")));
     }
 
     public void selectFlight() {
