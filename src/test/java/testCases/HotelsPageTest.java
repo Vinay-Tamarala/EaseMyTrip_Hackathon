@@ -29,10 +29,10 @@ public class HotelsPageTest extends BaseTest {
 
         hotelsPage = new HotelsPage(driver, wait);
     }
-    @Test(priority = 3){
+    @Test(priority = 3)
         public void testHotelsPage(){
             hotelsPage.HotelAction();
 
-        }
+
     }
 }
