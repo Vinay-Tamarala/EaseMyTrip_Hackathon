@@ -18,8 +18,12 @@ public class BaseTest {
     protected HomePage homePage;
     protected GiftCardPage giftCardPage;
     protected HotelsPage hotelsPage;
+    public FlightPage flightLocators;
+    public CheckOutPage checkLocators;
+    public PayPage payLocators;
     protected Home homePageVc;
     protected FlightsPage flights;
+
     @BeforeClass
     public void setUp() {
         String browser = ConfigReader.getProperty("browser").toLowerCase();
@@ -48,6 +52,9 @@ public class BaseTest {
         homePage = new HomePage(driver, wait);
         giftCardPage = new GiftCardPage(driver, wait);
         hotelsPage= new HotelsPage(driver,wait);
+        flightLocators = new FlightPage(driver,wait);
+        checkLocators = new CheckOutPage(driver,wait);
+        payLocators = new PayPage(driver);
         homePageVc = new Home(driver);
         flights = new FlightsPage(driver);
 

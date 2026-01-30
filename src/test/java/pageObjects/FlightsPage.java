@@ -1,5 +1,6 @@
 package pageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -51,7 +52,13 @@ public class FlightsPage {
             wait.until(ExpectedConditions.elementToBeClickable(fromCity)).click();
         }
         catch(StaleElementReferenceException e)
-        { fromCity.click(); }
+        {
+//            driver.findElement(By.xpath("(//div[@id='fromautoFill']/ul/li)[1]")).click();
+            wait.until(ExpectedConditions.elementToBeClickable(
+                    By.xpath("(//div[@id='fromautoFill']/ul/li)[1]"))
+            ).click();
+
+        }
 
         toCityInputField.sendKeys(destinationPlace);
 
@@ -60,7 +67,9 @@ public class FlightsPage {
         }
         catch(StaleElementReferenceException e)
         {
-            wait.until(ExpectedConditions.elementToBeClickable(toCity)).click();
+            wait.until(ExpectedConditions.elementToBeClickable(
+                    By.xpath("(//div[@id='toautoFill']/ul/li)[1]"))
+            ).click();
         }
 
         departureDate.click();
