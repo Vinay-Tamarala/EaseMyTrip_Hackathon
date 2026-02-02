@@ -54,7 +54,7 @@ public class BaseTest {
         hotelsPage= new HotelsPage(driver,wait);
         flightLocators = new FlightPage(driver,wait);
         checkLocators = new CheckOutPage(driver,wait);
-        payLocators = new PayPage(driver);
+        payLocators = new PayPage(driver,wait);
         homePageVc = new Home(driver);
         flights = new FlightsPage(driver);
 
