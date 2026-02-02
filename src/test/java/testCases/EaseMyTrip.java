@@ -16,5 +16,4 @@ public class EaseMyTrip extends BaseTest {
         driver.navigate().back();
         flights.testingSameDepartureAndDestination();
     }
-
 }
