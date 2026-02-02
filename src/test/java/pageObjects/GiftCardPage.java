@@ -56,6 +56,12 @@ public class GiftCardPage {
     @FindBy(xpath = "//p[@class='err_msg ng-binding' and contains(text(),'OTP has been sent')]")
     private WebElement otpMessage;
 
+    @FindBy(xpath = "//label[contains(text(),'Later')]")
+    private WebElement laterButton;
+
+    @FindBy(xpath = "//a[@class='ui-state-default']")
+    private WebElement clickDefault;
+
     public void selectWeddingCard() {
         wait.until(ExpectedConditions.elementToBeClickable(weddingCard)).click();
     }
@@ -85,5 +91,11 @@ public class GiftCardPage {
 
     public String getOtpMessage() {
         return wait.until(ExpectedConditions.visibilityOf(otpMessage)).getText();
+    }
+    public void selectLaterButton(){
+        wait.until(ExpectedConditions.elementToBeClickable(laterButton)).click();
+    }
+    public void selectTomorrowDate(){
+        wait.until(ExpectedConditions.elementToBeClickable(clickDefault)).click();
     }
 }

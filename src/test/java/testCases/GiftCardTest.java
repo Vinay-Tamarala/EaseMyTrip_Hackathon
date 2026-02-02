@@ -59,4 +59,53 @@ public class GiftCardTest extends BaseTest {
                 "Voucher amount should be between 500 and 50000.",
                 "Error message validation failed for invalid amount!");
     }
+    @Test(priority = 3)
+    public void testLaterButton(){
+        homePage.navigateToGiftCard();
+        giftCardPage.selectWeddingCard();
+        giftCardPage.enterGiftCardDetails(
+                ConfigReader.getProperty("amount"),
+                ConfigReader.getProperty("quantity"),
+                ConfigReader.getProperty("senderName"),
+                ConfigReader.getProperty("senderEmail"),
+                ConfigReader.getProperty("senderMobile"),
+                ConfigReader.getProperty("receiverName"),
+                ConfigReader.getProperty("receiverEmail"),
+                ConfigReader.getProperty("receiverMobile")
+        );
+        giftCardPage.selectLaterButton();
+        giftCardPage.selectTomorrowDate();
+        giftCardPage.clickPayNow();
+        String actualOtp = giftCardPage.getOtpMessage();
+        Assert.assertEquals(actualOtp,
+                ConfigReader.getProperty("expectedOtpMessage"),
+                "OTP message validation failed!");
+    }
+    @Test(priority = 4)
+    public void testUnselectedLaterButton(){
+        homePage.navigateToGiftCard();
+        giftCardPage.selectWeddingCard();
+        giftCardPage.enterGiftCardDetails(
+                ConfigReader.getProperty("amount"),
+                ConfigReader.getProperty("quantity"),
+                ConfigReader.getProperty("senderName"),
+                ConfigReader.getProperty("senderEmail"),
+                ConfigReader.getProperty("senderMobile"),
+                ConfigReader.getProperty("receiverName"),
+                ConfigReader.getProperty("receiverEmail"),
+                ConfigReader.getProperty("receiverMobile")
+        );
+        giftCardPage.selectLaterButton();
+        giftCardPage.clickPayNow();
+
+        String errorMessage = wait.until(ExpectedConditions
+                        .visibilityOfElementLocated(By.xpath("//span[.='Select date.']")))
+                .getText();
+
+        Assert.assertEquals(errorMessage,
+                "Select date.",
+                "Error message validation failed for later date calendar");
+
+    }
+
 }
