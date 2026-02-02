@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/2457422/IdeaProjects/EaseMyTrip_Hackathon">
+        <classes>
+            <class name="testCases.EaseMyTrip">
+                <methods>
+                    <include name="testFlightsNavigation"/>
+                </methods>
+            </class>
+            <class name="testCases.FlightCases">
+                <methods>
+                    <include name="FlightCaseTest"/>
+                    <include name="selectEmptyCoupon"/>
+                    <include name="selectFlightDetailsCase"/>
+                    <include name="payCases"/>
+                </methods>
+            </class>
+            <class name="testCases.GiftCardTest">
+                <methods>
+                    <include name="testGiftCardPurchaseFlow"/>
+                    <include name="testInvalidAmount"/>
+                    <include name="testLaterButton"/>
+                    <include name="testUnselectedLaterButton"/>
+                </methods>
+            </class>
+            <class name="testCases.HotelsPageTest">
+                <methods>
+                    <include name="verifyMaxAdultCountFlow"/>
+                    <include name="verifyHotelsNavigation"/>
+                    <include name="verifyAdultCountNotZero"/>
+                    <include name="verifyCheckInAndCheckOutAreNotSame"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
