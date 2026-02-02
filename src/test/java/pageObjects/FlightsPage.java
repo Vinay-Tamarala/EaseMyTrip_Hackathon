@@ -11,16 +11,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class FlightsPage {
+public class FlightsPage extends BasePage {
 
-    WebDriver driver;
     public FlightsPage(WebDriver driver){
-        this.driver = driver;
-        PageFactory.initElements(driver,this);
+        super(driver);
     }
 
-    @FindBy (xpath = "//div[@class='innerspcr' and @id='frmcity']")
-    private WebElement fromCityField;
+//    @FindBy (xpath = "//div[@class='innerspcr' and @id='frmcity']")
+//    private WebElement fromCityField;
 
     @FindBy (id = "a_FromSector_show")
     private WebElement fromCityInputField;
@@ -45,7 +43,11 @@ public class FlightsPage {
 
     public void addTravelDetails(String departurePlace,String destinationPlace){
         WebDriverWait wait  = new WebDriverWait(driver, Duration.ofSeconds(10));
-        fromCityField.click();
+        try {
+            driver.findElement(By.xpath("//div[@class='innerspcr' and @id='frmcity']")).click();
+        } catch (StaleElementReferenceException e) {
+            driver.findElement(By.xpath("//div[@class='innerspcr' and @id='frmcity']")).click();
+        }
         fromCityInputField.sendKeys(departurePlace);
 
         try {

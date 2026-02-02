@@ -3,12 +3,16 @@ package pageObjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
 import utilities.ConfigReader;
 
 public class PayPage extends BasePage{
-    public PayPage(WebDriver driver){
+    WebDriverWait wait;
+    public PayPage(WebDriver driver, WebDriverWait wait){
         super(driver);
+        this.wait=wait;
     }
     SoftAssert softAssert = new SoftAssert();
 
@@ -23,7 +27,7 @@ public class PayPage extends BasePage{
 
     public void assertEmail(){
         String expectedEmail= ConfigReader.getProperty("email");
-        String actualEmail=email.getText();
+        String actualEmail=wait.until(ExpectedConditions.visibilityOf(email)).getText();
         String normalizedEmail=expectedEmail.replaceAll(" ","");
         String normalizedActualEmail= actualEmail.replaceAll(" ","");
         softAssert.assertEquals(normalizedActualEmail,normalizedEmail,"Email doesn't match");

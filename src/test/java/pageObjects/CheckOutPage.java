@@ -1,10 +1,7 @@
 package pageObjects;
 
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -23,7 +20,7 @@ public class CheckOutPage extends BasePage {
     CommonCode cc=new CommonCode(driver);
 
     @FindBy(xpath="//*[@id='divInsuranceTab']/app-insurance/div[3]")
-    public WebElement insurance;
+    public WebElement insuranceOpt;
 
     @FindBy(xpath="//input[@id='chkInsurance']")
     WebElement insuranceYes;
@@ -55,12 +52,15 @@ public class CheckOutPage extends BasePage {
     @FindBy(xpath="//*[@id='spnTransaction']/span")
     WebElement continueBtn;
 
+    @FindBy(xpath ="//*[@id='spnApply']")
+    WebElement apply;
+
     @FindBy(xpath="//a[@id='skipPop']")
     WebElement skip;
 
-    public void selectInsurance(){
-     cc.scrollIntoView(insurance);
-     if(ConfigReader.getProperty("insurance").equals("yes"))
+    public void selectInsurance(String insurance){
+     cc.scrollIntoView(insuranceOpt);
+     if(insurance.equals("yes"))
      {
          cc.clickElement(insuranceYes);
      }
@@ -69,28 +69,33 @@ public class CheckOutPage extends BasePage {
      }
     }
 
-    public void enterTravellerDetails(){
+    public void enterTravellerDetails(String prefix,String fName,String lName,String email,String numb){
         Select select = new Select(prefixSelect);
-        select.selectByVisibleText(ConfigReader.getProperty("prefix"));
-        firstName.sendKeys(ConfigReader.getProperty("fName"));
-        lastName.sendKeys(ConfigReader.getProperty("lName"));
-        emailBox.sendKeys(ConfigReader.getProperty("email"));
-        number.sendKeys(ConfigReader.getProperty("Number"));
+        select.selectByVisibleText(prefix);
+        firstName.sendKeys(fName);
+        lastName.sendKeys(lName);
+        emailBox.sendKeys(email);
+        number.sendKeys(numb);
     }
 
-    public void enterContactDetails(){
-      contactEmail.sendKeys(ConfigReader.getProperty("email"));
-      contactNumber.sendKeys(ConfigReader.getProperty("Number"));
+    public String enterCoupon(){
+        cc.clickElement(apply);
+        Alert alert=driver.switchTo().alert();
+        String alertMsg=alert.getText();
+        alert.accept();
+        return alertMsg;
+    }
+    public void enterContactDetails(String email,String number){
+      contactEmail.sendKeys(email);
+      contactNumber.sendKeys(number);
       try {
           wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='spnTransactionbtnLoader']")));
-//          wait.until(ExpectedConditions.elementToBeClickable(continueBtn));
           cc.clickElement(continueBtn);
       }
       catch(TimeoutException e) {
           cc.clickElement(continueBtn);
           cc.clickElement(driver.findElement(By.xpath("//a[@class='conf_btn']")));
           cc.clickElement(skip);
-//          cc.clickElement(continueBtn);
       }
     }
 
