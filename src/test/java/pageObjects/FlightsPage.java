@@ -17,8 +17,6 @@ public class FlightsPage extends BasePage {
         super(driver);
     }
 
-//    @FindBy (xpath = "//div[@class='innerspcr' and @id='frmcity']")
-//    private WebElement fromCityField;
 
     @FindBy (id = "a_FromSector_show")
     private WebElement fromCityInputField;

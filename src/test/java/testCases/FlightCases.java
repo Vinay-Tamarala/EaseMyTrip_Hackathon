@@ -24,8 +24,11 @@ public class FlightCases extends BaseTest {
         @Test(priority=3)
         public void selectFlightDetailsCase(){
          checkLocators.selectInsurance(ConfigReader.getProperty("insurance"));
-         checkLocators.enterTravellerDetails(ConfigReader.getProperty("prefix"),ConfigReader.getProperty("fName"),
-                 ConfigReader.getProperty("lName"),ConfigReader.getProperty("email"),ConfigReader.getProperty("Number"));
+         checkLocators.enterTravellerDetails(ConfigReader.getProperty("prefix"),
+                                             ConfigReader.getProperty("fName"),
+                                             ConfigReader.getProperty("lName"),
+                                             ConfigReader.getProperty("email"),
+                                             ConfigReader.getProperty("Number"));
          checkLocators.enterContactDetails(ConfigReader.getProperty("email"),ConfigReader.getProperty("Number"));
         }
 
