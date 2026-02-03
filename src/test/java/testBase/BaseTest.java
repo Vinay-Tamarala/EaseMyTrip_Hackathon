@@ -24,6 +24,7 @@ public class BaseTest {
     public PayPage payLocators;
     protected Home homePageVc;
     protected FlightsPage flights;
+    protected MyBookingPage myBookingPage;
     public CommonCode cc;
 
     @BeforeClass
@@ -59,6 +60,7 @@ public class BaseTest {
         payLocators = new PayPage(driver,wait);
         homePageVc = new Home(driver);
         flights = new FlightsPage(driver);
+        myBookingPage = new MyBookingPage(driver,wait);
         cc= new CommonCode(driver);
         System.out.println("Running tests on: " + browser.toUpperCase());
     }
