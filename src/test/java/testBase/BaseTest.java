@@ -22,6 +22,7 @@ public class BaseTest {
     public FlightPage flightLocators;
     public CheckOutPage checkLocators;
     public PayPage payLocators;
+    public LoginPage loginLocators;
     protected Home homePageVc;
     protected FlightsPage flights;
     protected MyBookingPage myBookingPage;
@@ -58,6 +59,7 @@ public class BaseTest {
         flightLocators = new FlightPage(driver,wait);
         checkLocators = new CheckOutPage(driver,wait);
         payLocators = new PayPage(driver,wait);
+        loginLocators = new LoginPage(driver,wait);
         homePageVc = new Home(driver);
         flights = new FlightsPage(driver);
         myBookingPage = new MyBookingPage(driver,wait);

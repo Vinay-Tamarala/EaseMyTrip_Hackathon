@@ -4,10 +4,12 @@ import org.testng.annotations.Test;
 import testBase.BaseTest;
 import utilities.ConfigReader;
 
+import java.io.IOException;
+
 public class FlightCases extends BaseTest {
 
         @Test(priority = 1)
-        public void flightCaseTest() {
+        public void flightCaseTest() throws IOException {
             flights.addTravelDetails(ConfigReader.getProperty("fromCity"),ConfigReader.getProperty("toCity"));
             flightLocators.selectFilter();
             flightLocators.flightPrices();
