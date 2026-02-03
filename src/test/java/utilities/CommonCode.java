@@ -1,9 +1,11 @@
 package utilities;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import testBase.BaseTest;
+
+import java.io.File;
+import java.io.IOException;
 
 public class CommonCode extends BaseTest {
     WebDriver driver;
@@ -23,6 +25,21 @@ public class CommonCode extends BaseTest {
             scrollIntoView(element);
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("arguments[0].click();", element);
+        }
+    }
+
+    public void takeScreenShot(String name) {
+        TakesScreenshot ts = (TakesScreenshot) driver;
+        File dir = new File(System.getProperty("user.dir") + "/screenshots1/");
+        if (!dir.exists()) {
+            dir.mkdirs();
+        }
+        try {
+            FileUtils.copyFile(ts.getScreenshotAs(OutputType.FILE),
+                    new File(dir, name + ".jpeg"));
+            System.out.println(name + ": Screenshot has been captured.");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

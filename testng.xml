@@ -10,7 +10,7 @@
             </class>
             <class name="testCases.FlightCases">
                 <methods>
-                    <include name="FlightCaseTest"/>
+                    <include name="flightCaseTest"/>
                     <include name="selectEmptyCoupon"/>
                     <include name="selectFlightDetailsCase"/>
                     <include name="payCases"/>
