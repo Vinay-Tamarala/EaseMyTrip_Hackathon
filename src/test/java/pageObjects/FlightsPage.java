@@ -5,10 +5,11 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
+import utilities.ConfigReader;
+import utilities.Log;
 
 import java.time.Duration;
 
@@ -52,6 +53,13 @@ public class FlightsPage extends BasePage{
     @FindBy(id = "pcalss")
     private WebElement defaultSelectedClass;
 
+    @FindBy(xpath = "//input[@id='FromSector_show']")
+    private WebElement afterFrom;
+
+    @FindBy(xpath = "//input[@id='Editbox13_show']")
+    private WebElement afterTo;
+
+
     //TC1 - Adding valid travel details
     public void addTravelDetails(String departurePlace,String destinationPlace){
         WebDriverWait wait  = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -67,7 +75,6 @@ public class FlightsPage extends BasePage{
         }
         catch(StaleElementReferenceException e)
         {
-//            driver.findElement(By.xpath("(//div[@id='fromautoFill']/ul/li)[1]")).click();
             wait.until(ExpectedConditions.elementToBeClickable(
                     By.xpath("(//div[@id='fromautoFill']/ul/li)[1]"))
             ).click();
@@ -87,13 +94,10 @@ public class FlightsPage extends BasePage{
         }
 
         departureDate.click();
-        searchBtn.click();
-
-    }
+}
 
     //TC2 - validating error message with same departure and destination date
     public void testingSameDepartureAndDestination(){
-        addTravelDetails("Mumbai", "Mumbai");
         String error = errorMsg.getText();
         System.out.println("Error message displayed when same departure and destination location is selected : " + error);
     }
@@ -101,20 +105,15 @@ public class FlightsPage extends BasePage{
     //TC3 - validating the city swap functionality
     public void testingCitySwitchFunctionality(){
         // Capture current values before swap
-        String fromBefore = fromCityInputField.getAttribute("value").trim();
-        String toBefore   = toCityInputField.getAttribute("value").trim();
+        String fromBefore = ConfigReader.getProperty("fromCity");
+        String toBefore   = ConfigReader.getProperty("toCity");
 
         // Perform swap
         swapCity.click();
 
-        // Wait until the fields reflect swapped values
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(d -> toBefore.equals(fromCityInputField.getAttribute("value").trim())
-                && fromBefore.equals(toCityInputField.getAttribute("value").trim()));
-
         // Capture values after swap
-        String fromAfter = fromCityInputField.getAttribute("value").trim();
-        String toAfter   = toCityInputField.getAttribute("value").trim();
+        String fromAfter = afterFrom.getAttribute("value");
+        String toAfter = afterTo.getAttribute("value");
 
         // Validate the swap
         SoftAssert softAssert = new SoftAssert();
@@ -123,7 +122,6 @@ public class FlightsPage extends BasePage{
         softAssert.assertEquals(toAfter, fromBefore,
                 "To city should become the previous From city after swap");
         softAssert.assertAll();
-
     }
 
 
@@ -131,13 +129,20 @@ public class FlightsPage extends BasePage{
 
     }
 
-    //TC4 - validating default traveller count
-    public void verifyDefaultTravellerCount(){
+    //TC4 - validating default traveller count at least 1 traveller is selected by default
+    public void verifyDefaultTravellerCountAndClass(){
         String expectedDefaultTraveller = "1 Economy";
         String actualDefaultTraveller = defaultCount.getText() + " " + defaultSelectedClass.getText();
         SoftAssert asserT = new SoftAssert();
-        asserT.assertEquals(actualDefaultTraveller,expectedDefaultTraveller, "Does not match");
+        asserT.assertEquals(actualDefaultTraveller,expectedDefaultTraveller,
+                "Does not match");
         asserT.assertAll();
-        System.out.println("Passed");
+        Log.info("Validated default traveller count.");
+
+    }
+
+    //Navigate to result page
+    public void navigateToFlightsSearch(){
+        searchBtn.click();
     }
 }
