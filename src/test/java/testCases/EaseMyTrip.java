@@ -37,5 +37,12 @@ public class EaseMyTrip extends BaseTest {
         flights.addTravelDetails(ConfigReader.getProperty("fromCity"),ConfigReader.getProperty("toCity"));
         cc.takeScreenShot("ValidSearchDetails");
         flights.navigateToFlightsSearch();
+        driver.navigate().back();
+    }
+
+    @Test(priority = 5)
+    public void testRoundTripFunctionality(){
+        flights.testingRoundTripFunctionality(ConfigReader.getProperty("fromCity"),ConfigReader.getProperty("toCity"));
+        cc.takeScreenShot("RoundTripSearch");
     }
 }

@@ -59,6 +59,18 @@ public class FlightsPage extends BasePage{
     @FindBy(xpath = "//input[@id='Editbox13_show']")
     private WebElement afterTo;
 
+    @FindBy(xpath = "//li[@id='rtrip']")
+    private WebElement roundtrip;
+
+    @FindBy(xpath = "//div[@id='divRtnCal']")
+    private WebElement selectReturnDateField;
+
+    @FindBy(xpath = "//li[@id='trd_5_20/02/2026']")
+    private WebElement selectReturnDate;
+
+    @FindBy(xpath = "//div[@id='QUC_TOTALFARE']")
+    private WebElement roundTripElement;
+
 
     //TC1 - Adding valid travel details
     public void addTravelDetails(String departurePlace,String destinationPlace){
@@ -124,11 +136,6 @@ public class FlightsPage extends BasePage{
         softAssert.assertAll();
     }
 
-
-    public void testingPassengers(){
-
-    }
-
     //TC4 - validating default traveller count at least 1 traveller is selected by default
     public void verifyDefaultTravellerCountAndClass(){
         String expectedDefaultTraveller = "1 Economy";
@@ -144,5 +151,65 @@ public class FlightsPage extends BasePage{
     //Navigate to result page
     public void navigateToFlightsSearch(){
         searchBtn.click();
+    }
+
+    // TC5 - validating round trip functionality
+    public void testingRoundTripFunctionality(String departurePlace,String destinationPlace) {
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        roundtrip.click();
+
+        try {
+            driver.findElement(By.xpath("//div[@class='innerspcr' and @id='frmcity']")).click();
+        } catch (StaleElementReferenceException e) {
+            driver.findElement(By.xpath("//div[@class='innerspcr' and @id='frmcity']")).click();
+        }
+        fromCityInputField.clear();
+        fromCityInputField.sendKeys(departurePlace);
+
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(fromCity)).click();
+        }
+        catch(StaleElementReferenceException e)
+        {
+            wait.until(ExpectedConditions.elementToBeClickable(
+                    By.xpath("(//div[@id='fromautoFill']/ul/li)[1]"))
+            ).click();
+        }
+
+        toCityInputField.sendKeys(destinationPlace);
+
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(toCity)).click();
+        }
+        catch(StaleElementReferenceException e)
+        {
+            wait.until(ExpectedConditions.elementToBeClickable(
+                    By.xpath("(//div[@id='toautoFill']/ul/li)[1]"))
+            ).click();
+        }
+
+        departureDate.click();
+        selectReturnDateField.click();
+        selectReturnDate.click();
+
+
+        String fromDisplayed = "";
+        String toDisplayed   = "";
+        try { fromDisplayed = fromCityInputField.getAttribute("value"); } catch (Exception ignored) {}
+        try { toDisplayed   = toCityInputField.getAttribute("value"); }   catch (Exception ignored) {}
+
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertFalse(fromDisplayed.isEmpty(), "From city should be selected for round trip");
+        softAssert.assertFalse(toDisplayed.isEmpty(),   "To city should be selected for round trip");
+
+        softAssert.assertAll();
+        Log.info("Round trip flow executed successfully with From: "
+                + fromDisplayed + " and To: " + toDisplayed);
+
+        searchBtn.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='QUC_TOTALFARE']")));
+
     }
 }
