@@ -4,8 +4,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import pageObjects.HomePage;
-import pageObjects.GiftCardPage;
 import utilities.ConfigReader;
 import testBase.BaseTest;
 
@@ -31,7 +29,7 @@ public class GiftCardTest extends BaseTest {
         String actualOtp = giftCardPage.getOtpMessage();
         Assert.assertEquals(actualOtp,
                 ConfigReader.getProperty("expectedOtpMessage"),
-                "OTP message validation failed!");
+                "OTP message validation failed");
     }
 
     @Test(priority = 2)
@@ -57,7 +55,7 @@ public class GiftCardTest extends BaseTest {
 
         Assert.assertEquals(errorMessage,
                 "Voucher amount should be between 500 and 50000.",
-                "Error message validation failed for invalid amount!");
+                "Error message validation failed for invalid amount");
     }
     @Test(priority = 3)
     public void testLaterButton(){
@@ -79,7 +77,7 @@ public class GiftCardTest extends BaseTest {
         String actualOtp = giftCardPage.getOtpMessage();
         Assert.assertEquals(actualOtp,
                 ConfigReader.getProperty("expectedOtpMessage"),
-                "OTP message validation failed!");
+                "OTP message validation failed");
     }
     @Test(priority = 4)
     public void testUnselectedLaterButton(){

@@ -27,6 +27,12 @@ public class HomePage {
     @FindBy(xpath = "//span[@class=\"meuicowidth hotelmenuico\"]")
     WebElement hotels;
 
+    @FindBy(css = "a[class='_btnclick'] span")
+    WebElement loginSignupButton;
+
+    @FindBy(xpath = "//span[.='My Booking']")
+    WebElement myBookingButton;
+
 
     public void navigateToGiftCard() {
         Actions actions = new Actions(driver);
@@ -37,6 +43,15 @@ public class HomePage {
     //hotels
     public void navigateToHotels(){
        hotels.click();
+    }
+
+    //Login and Signup Button
+    public void navigateToSignupButton(){
+        Actions actions = new Actions(driver);
+        actions.moveToElement(loginSignupButton).perform();
+        wait.until(ExpectedConditions.visibilityOf(myBookingButton));
+        myBookingButton.click();
+
     }
 
 }
