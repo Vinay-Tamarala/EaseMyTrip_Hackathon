@@ -12,16 +12,12 @@ import org.testng.asserts.SoftAssert;
 
 import java.time.Duration;
 
-public class FlightsPage {
+public class FlightsPage extends BasePage{
 
-    WebDriver driver;
+
     public FlightsPage(WebDriver driver){
-        this.driver = driver;
-        PageFactory.initElements(driver,this);
+        super(driver);
     }
-
-    String toCityName  ;
-    String fromCityName ;
 
     @FindBy (xpath = "//div[@class='innerspcr' and @id='frmcity']")
     private WebElement fromCityField;
@@ -68,8 +64,6 @@ public class FlightsPage {
 
         try {
             wait.until(ExpectedConditions.elementToBeClickable(fromCity)).click();
-            fromCityName  = fromCity.getText();
-
         }
         catch(StaleElementReferenceException e)
         {
@@ -84,14 +78,12 @@ public class FlightsPage {
 
         try {
             wait.until(ExpectedConditions.elementToBeClickable(toCity)).click();
-            toCityName  = toCity.getText();
         }
         catch(StaleElementReferenceException e)
         {
             wait.until(ExpectedConditions.elementToBeClickable(
                     By.xpath("(//div[@id='toautoFill']/ul/li)[1]"))
             ).click();
-            toCityName  = toCity.getText();
         }
 
         departureDate.click();
@@ -108,8 +100,32 @@ public class FlightsPage {
 
     //TC3 - validating the city swap functionality
     public void testingCitySwitchFunctionality(){
+        // Capture current values before swap
+        String fromBefore = fromCityInputField.getAttribute("value").trim();
+        String toBefore   = toCityInputField.getAttribute("value").trim();
+
+        // Perform swap
         swapCity.click();
+
+        // Wait until the fields reflect swapped values
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(d -> toBefore.equals(fromCityInputField.getAttribute("value").trim())
+                && fromBefore.equals(toCityInputField.getAttribute("value").trim()));
+
+        // Capture values after swap
+        String fromAfter = fromCityInputField.getAttribute("value").trim();
+        String toAfter   = toCityInputField.getAttribute("value").trim();
+
+        // Validate the swap
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertEquals(fromAfter, toBefore,
+                "From city should become the previous To city after swap");
+        softAssert.assertEquals(toAfter, fromBefore,
+                "To city should become the previous From city after swap");
+        softAssert.assertAll();
+
     }
+
 
     public void testingPassengers(){
 
