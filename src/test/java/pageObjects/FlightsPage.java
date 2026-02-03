@@ -1,4 +1,3 @@
-
 package pageObjects;
 
 import org.openqa.selenium.By;
@@ -149,6 +148,11 @@ public class FlightsPage extends BasePage{
 
     }
 
+    //Navigate to result page
+    public void navigateToFlightsSearch(){
+        searchBtn.click();
+    }
+
     // TC5 - validating round trip functionality
     public void testingRoundTripFunctionality(String departurePlace,String destinationPlace) {
 
@@ -207,10 +211,5 @@ public class FlightsPage extends BasePage{
         searchBtn.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='QUC_TOTALFARE']")));
 
-    }
-
-    //Navigate to result page
-    public void navigateToFlightsSearch(){
-        searchBtn.click();
     }
 }
