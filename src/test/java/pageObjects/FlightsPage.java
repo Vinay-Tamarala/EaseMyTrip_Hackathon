@@ -8,17 +8,23 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.asserts.SoftAssert;
 
 import java.time.Duration;
 
-public class FlightsPage extends BasePage {
+public class FlightsPage {
 
+    WebDriver driver;
     public FlightsPage(WebDriver driver){
-        super(driver);
+        this.driver = driver;
+        PageFactory.initElements(driver,this);
     }
 
-//    @FindBy (xpath = "//div[@class='innerspcr' and @id='frmcity']")
-//    private WebElement fromCityField;
+    String toCityName  ;
+    String fromCityName ;
+
+    @FindBy (xpath = "//div[@class='innerspcr' and @id='frmcity']")
+    private WebElement fromCityField;
 
     @FindBy (id = "a_FromSector_show")
     private WebElement fromCityInputField;
@@ -41,6 +47,16 @@ public class FlightsPage extends BasePage {
     @FindBy(xpath = "//div[@class='errorfrmsrc error-message-dropoff']")
     private WebElement errorMsg;
 
+    @FindBy(id = "swap")
+    private WebElement swapCity;
+
+    @FindBy(id = "spnDrpNo")
+    private WebElement defaultCount;
+
+    @FindBy(id = "pcalss")
+    private WebElement defaultSelectedClass;
+
+    //TC1 - Adding valid travel details
     public void addTravelDetails(String departurePlace,String destinationPlace){
         WebDriverWait wait  = new WebDriverWait(driver, Duration.ofSeconds(10));
         try {
@@ -52,6 +68,8 @@ public class FlightsPage extends BasePage {
 
         try {
             wait.until(ExpectedConditions.elementToBeClickable(fromCity)).click();
+            fromCityName  = fromCity.getText();
+
         }
         catch(StaleElementReferenceException e)
         {
@@ -66,12 +84,14 @@ public class FlightsPage extends BasePage {
 
         try {
             wait.until(ExpectedConditions.elementToBeClickable(toCity)).click();
+            toCityName  = toCity.getText();
         }
         catch(StaleElementReferenceException e)
         {
             wait.until(ExpectedConditions.elementToBeClickable(
                     By.xpath("(//div[@id='toautoFill']/ul/li)[1]"))
             ).click();
+            toCityName  = toCity.getText();
         }
 
         departureDate.click();
@@ -79,9 +99,29 @@ public class FlightsPage extends BasePage {
 
     }
 
+    //TC2 - validating error message with same departure and destination date
     public void testingSameDepartureAndDestination(){
         addTravelDetails("Mumbai", "Mumbai");
         String error = errorMsg.getText();
         System.out.println("Error message displayed when same departure and destination location is selected : " + error);
+    }
+
+    //TC3 - validating the city swap functionality
+    public void testingCitySwitchFunctionality(){
+        swapCity.click();
+    }
+
+    public void testingPassengers(){
+
+    }
+
+    //TC4 - validating default traveller count
+    public void verifyDefaultTravellerCount(){
+        String expectedDefaultTraveller = "1 Economy";
+        String actualDefaultTraveller = defaultCount.getText() + " " + defaultSelectedClass.getText();
+        SoftAssert asserT = new SoftAssert();
+        asserT.assertEquals(actualDefaultTraveller,expectedDefaultTraveller, "Does not match");
+        asserT.assertAll();
+        System.out.println("Passed");
     }
 }
