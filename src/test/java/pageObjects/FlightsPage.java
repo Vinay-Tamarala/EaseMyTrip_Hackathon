@@ -59,7 +59,11 @@ public class FlightsPage {
     //TC1 - Adding valid travel details
     public void addTravelDetails(String departurePlace,String destinationPlace){
         WebDriverWait wait  = new WebDriverWait(driver, Duration.ofSeconds(10));
-        fromCityField.click();
+        try {
+            driver.findElement(By.xpath("//div[@class='innerspcr' and @id='frmcity']")).click();
+        } catch (StaleElementReferenceException e) {
+            driver.findElement(By.xpath("//div[@class='innerspcr' and @id='frmcity']")).click();
+        }
         fromCityInputField.sendKeys(departurePlace);
 
         try {
@@ -69,10 +73,11 @@ public class FlightsPage {
         }
         catch(StaleElementReferenceException e)
         {
+//            driver.findElement(By.xpath("(//div[@id='fromautoFill']/ul/li)[1]")).click();
             wait.until(ExpectedConditions.elementToBeClickable(
                     By.xpath("(//div[@id='fromautoFill']/ul/li)[1]"))
             ).click();
-            fromCityName  = fromCity.getText();
+
         }
 
         toCityInputField.sendKeys(destinationPlace);
