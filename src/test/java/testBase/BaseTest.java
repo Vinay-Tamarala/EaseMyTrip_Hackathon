@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import pageObjects.*;
+import utilities.CommonCode;
 import utilities.ConfigReader;
 
 import java.time.Duration;
@@ -23,6 +24,7 @@ public class BaseTest {
     public PayPage payLocators;
     protected Home homePageVc;
     protected FlightsPage flights;
+    public CommonCode cc;
 
     @BeforeClass
     public void setUp() {
@@ -57,7 +59,7 @@ public class BaseTest {
         payLocators = new PayPage(driver,wait);
         homePageVc = new Home(driver);
         flights = new FlightsPage(driver);
-
+        cc= new CommonCode(driver);
         System.out.println("Running tests on: " + browser.toUpperCase());
     }
 
