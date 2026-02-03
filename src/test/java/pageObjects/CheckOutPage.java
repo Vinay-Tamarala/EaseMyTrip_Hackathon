@@ -55,6 +55,9 @@ public class CheckOutPage extends BasePage {
     @FindBy(xpath ="//*[@id='spnApply']")
     WebElement apply;
 
+    @FindBy(xpath ="//div[text()='Remove']")
+    WebElement remove;
+
     @FindBy(xpath="//a[@id='skipPop']")
     WebElement skip;
 
@@ -79,11 +82,21 @@ public class CheckOutPage extends BasePage {
     }
 
     public String enterCoupon(){
-        cc.clickElement(apply);
-        Alert alert=driver.switchTo().alert();
-        String alertMsg=alert.getText();
-        alert.accept();
-        return alertMsg;
+        if(driver.findElement(By.xpath("//*[@id='divCouponApplied']")).isDisplayed()) {
+            cc.clickElement(remove);
+            cc.clickElement(apply);
+            Alert alert = driver.switchTo().alert();
+            String alertMsg = alert.getText();
+            alert.accept();
+            return alertMsg;
+        }
+        else {
+            cc.clickElement(apply);
+            Alert alert = driver.switchTo().alert();
+            String alertMsg = alert.getText();
+            alert.accept();
+            return alertMsg;
+        }
     }
     public void enterContactDetails(String email,String number){
       contactEmail.sendKeys(email);

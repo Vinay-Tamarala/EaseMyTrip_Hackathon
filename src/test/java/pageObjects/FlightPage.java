@@ -1,6 +1,7 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,6 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.CommonCode;
 import utilities.ConfigReader;
 
+import java.io.IOException;
 import java.util.List;
 
 public class FlightPage extends BasePage{
@@ -36,10 +38,16 @@ public class FlightPage extends BasePage{
     }
 
     public void selectType(){
-        driver.findElement(By.xpath("//div[contains(normalize-space(text()),'"+ConfigReader.getProperty("type")+"')]")).click();
-        driver.findElement(By.xpath("//div[contains(normalize-space(@class),'fareheader') and contains(normalize-space(text()),'"+ConfigReader.getProperty("Value")+"')]//ancestor::label//a[text()=' Book Now ']")).click();
+        try {
+            driver.findElement(By.xpath("//div[contains(normalize-space(text()),'" + ConfigReader.getProperty("type") + "')]")).click();
+            driver.findElement(By.xpath("//div[contains(normalize-space(@class),'fareheader') and contains(normalize-space(text()),'" + ConfigReader.getProperty("Value") + "')]//ancestor::label//a[text()=' Book Now ']")).click();
+        }
+        catch (ElementNotInteractableException e)
+        {
+            driver.findElement(By.xpath("(//a[text()=' Book Now '])[1]")).click();
+        }
     }
-    public void flightPrices(){
+    public void flightPrices() throws IOException {
         List<WebElement> priceslist=prices;
         for(WebElement price:priceslist){
             System.out.print(price.getText()+" ");

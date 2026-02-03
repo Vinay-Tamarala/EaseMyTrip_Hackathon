@@ -22,6 +22,7 @@ public class BaseTest {
     public FlightPage flightLocators;
     public CheckOutPage checkLocators;
     public PayPage payLocators;
+    public LoginPage loginLocators;
     protected Home homePageVc;
     protected FlightsPage flights;
     public CommonCode cc;
@@ -57,6 +58,7 @@ public class BaseTest {
         flightLocators = new FlightPage(driver,wait);
         checkLocators = new CheckOutPage(driver,wait);
         payLocators = new PayPage(driver,wait);
+        loginLocators = new LoginPage(driver,wait);
         homePageVc = new Home(driver);
         flights = new FlightsPage(driver);
         cc= new CommonCode(driver);

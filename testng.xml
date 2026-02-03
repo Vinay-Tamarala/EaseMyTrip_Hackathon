@@ -3,6 +3,13 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/2457422/IdeaProjects/EaseMyTrip_Hackathon">
         <classes>
+            <class name="testCases.LoginCase">
+                <methods>
+                    <include name="invalidMailCase"/>
+                    <include name="invalidPasswordCase"/>
+                    <include name="validLoginTestCase"/>
+                </methods>
+            </class>
             <class name="testCases.EaseMyTrip">
                 <methods>
                     <include name="testFlightsNavigation"/>
