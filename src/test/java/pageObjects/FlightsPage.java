@@ -1,3 +1,4 @@
+
 package pageObjects;
 
 import org.openqa.selenium.By;
@@ -106,7 +107,7 @@ public class FlightsPage extends BasePage{
         }
 
         departureDate.click();
-}
+    }
 
     //TC2 - validating error message with same departure and destination date
     public void testingSameDepartureAndDestination(){
