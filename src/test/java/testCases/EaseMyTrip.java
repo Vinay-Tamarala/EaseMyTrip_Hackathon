@@ -3,9 +3,6 @@ package testCases;
 import org.testng.annotations.Test;
 import testBase.BaseTest;
 import utilities.ConfigReader;
-import utilities.Log;
-
-import java.time.Duration;
 
 public class EaseMyTrip extends BaseTest {
 
