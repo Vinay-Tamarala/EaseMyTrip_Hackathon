@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 import testBase.BaseTest;
 import utilities.ConfigReader;
 
-public class LoginCase extends BaseTest {
+public class LoginTest extends BaseTest {
 
     @Test(priority=1)
     public void invalidMailCase(){

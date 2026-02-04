@@ -6,7 +6,7 @@ import utilities.ConfigReader;
 
 import java.io.IOException;
 
-public class FlightCases extends BaseTest {
+public class FlightsTest extends BaseTest {
 
         @Test(priority = 1)
         public void flightCaseTest() throws IOException {

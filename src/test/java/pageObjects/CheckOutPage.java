@@ -19,7 +19,7 @@ public class CheckOutPage extends BasePage {
 
     CommonCode cc=new CommonCode(driver);
 
-    @FindBy(xpath="//*[@id='divInsuranceTab']/app-insurance/div[3]")
+    @FindBy(xpath="//div[@id='divInsuranceTab']/app-insurance/div[3]")
     public WebElement insuranceOpt;
 
     @FindBy(xpath="//input[@id='chkInsurance']")
@@ -49,10 +49,10 @@ public class CheckOutPage extends BasePage {
     @FindBy(xpath="//input[@id='txtCPhone']")
     WebElement contactNumber;
 
-    @FindBy(xpath="//*[@id='spnTransaction']/span")
+    @FindBy(xpath="//span[@id='spnTransaction']/span")
     WebElement continueBtn;
 
-    @FindBy(xpath ="//*[@id='spnApply']")
+    @FindBy(xpath ="//div[@id='spnApply']")
     WebElement apply;
 
     @FindBy(xpath ="//div[text()='Remove']")
@@ -104,7 +104,7 @@ public class CheckOutPage extends BasePage {
       contactEmail.sendKeys(email);
       contactNumber.sendKeys(number);
       try {
-          wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='spnTransactionbtnLoader']")));
+          wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='spnTransactionbtnLoader']")));
           cc.clickElement(continueBtn);
       }
       catch(TimeoutException e) {
