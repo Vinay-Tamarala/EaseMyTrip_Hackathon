@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class MyBookingPage extends BasePage {
+public class MyBookingPage extends DriverInitialization {
     WebDriverWait wait;
 
     public MyBookingPage(WebDriver driver, WebDriverWait wait) {

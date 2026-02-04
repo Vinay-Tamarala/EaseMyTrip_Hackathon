@@ -10,10 +10,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.CommonCode;
 import utilities.ConfigReader;
 
-import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
-public class FlightPage extends BasePage{
+public class FlightPage extends DriverInitialization {
     WebDriverWait wait;
     public FlightPage(WebDriver driver, WebDriverWait wait){
         super(driver);
@@ -48,10 +48,11 @@ public class FlightPage extends BasePage{
             driver.findElement(By.xpath("(//a[text()=' Book Now '])[1]")).click();
         }
     }
-    public void flightPrices() throws IOException {
-        List<WebElement> priceslist=prices;
-        for(WebElement price:priceslist){
-            System.out.print(price.getText()+" ");
+    public List<String> flightPrices() {
+        List<String> priceslist= new ArrayList<>();
+        for(WebElement price:prices){
+            priceslist.add(price.getText());
         }
+        return priceslist;
     }
 }

@@ -13,7 +13,7 @@ import utilities.Log;
 
 import java.time.Duration;
 
-public class FlightsPage extends BasePage{
+public class FlightsPage extends DriverInitialization {
 
 
     public FlightsPage(WebDriver driver){

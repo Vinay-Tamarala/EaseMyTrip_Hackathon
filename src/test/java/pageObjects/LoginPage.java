@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LoginPage extends BasePage{
+public class LoginPage extends DriverInitialization {
     WebDriverWait wait;
     public LoginPage(WebDriver driver,WebDriverWait wait){
         super(driver);
@@ -60,14 +60,14 @@ public class LoginPage extends BasePage{
         login.click();
     }
 
-    public void emailError(){
+    public String emailError(){
         wait.until(ExpectedConditions.visibilityOf(invalidMail));
-        System.out.println("Error is: "+invalidMail.getText());
+        return invalidMail.getText();
     }
 
-    public void passError(){
+    public String passError(){
         wait.until(ExpectedConditions.visibilityOf(invalidPass));
-        System.out.println("Error is : "+invalidPass.getText());
+        return invalidPass.getText();
     }
 
     public void closeMailPopUp(){

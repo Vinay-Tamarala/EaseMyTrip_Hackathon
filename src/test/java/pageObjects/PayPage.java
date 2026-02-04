@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
 import utilities.ConfigReader;
 
-public class PayPage extends BasePage{
+public class PayPage extends DriverInitialization {
     WebDriverWait wait;
     public PayPage(WebDriver driver, WebDriverWait wait){
         super(driver);
