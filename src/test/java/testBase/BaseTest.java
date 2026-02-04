@@ -61,7 +61,7 @@ public class BaseTest {
         payLocators = new PayPage(driver,wait);
         loginLocators = new LoginPage(driver,wait);
         homePageVc = new Home(driver);
-        flights = new FlightsPage(driver);
+        flights = new FlightsPage(driver,wait);
         myBookingPage = new MyBookingPage(driver,wait);
         cc= new CommonCode(driver);
         System.out.println("Running tests on: " + browser.toUpperCase());

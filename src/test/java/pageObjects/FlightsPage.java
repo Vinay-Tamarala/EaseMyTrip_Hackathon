@@ -11,29 +11,19 @@ import org.testng.asserts.SoftAssert;
 import utilities.ConfigReader;
 import utilities.Log;
 
-import java.time.Duration;
-
 public class FlightsPage extends DriverInitialization {
 
-
-    public FlightsPage(WebDriver driver){
+    WebDriverWait wait;
+    public FlightsPage(WebDriver driver, WebDriverWait wait){
         super(driver);
+        this.wait=wait;
     }
-
-    @FindBy (xpath = "//div[@class='innerspcr' and @id='frmcity']")
-    private WebElement fromCityField;
 
     @FindBy (id = "a_FromSector_show")
     private WebElement fromCityInputField;
 
-    @FindBy (xpath = "(//div[@id='fromautoFill']/ul/li)[1]")
-    private WebElement fromCity;
-
     @FindBy (id = "a_Editbox13_show")
     private WebElement toCityInputField;
-
-    @FindBy (xpath = "(//div[@id='toautoFill']/ul/li)[1]")
-    private WebElement toCity;
 
     @FindBy (xpath = "//li[@id='snd_6_14/02/2026']")
     private WebElement departureDate;
@@ -71,10 +61,11 @@ public class FlightsPage extends DriverInitialization {
     @FindBy(xpath = "//div[@id='QUC_TOTALFARE']")
     private WebElement roundTripElement;
 
+    By fromCityLocator = By.xpath("(//div[@id='fromautoFill']/ul/li)[1]");
+    By toCityLocator = By.xpath("(//div[@id='toautoFill']/ul/li)[1]");
 
     //TC1 - Adding valid travel details
     public void addTravelDetails(String departurePlace,String destinationPlace){
-        WebDriverWait wait  = new WebDriverWait(driver, Duration.ofSeconds(10));
         try {
             driver.findElement(By.xpath("//div[@class='innerspcr' and @id='frmcity']")).click();
         } catch (StaleElementReferenceException e) {
@@ -82,28 +73,11 @@ public class FlightsPage extends DriverInitialization {
         }
         fromCityInputField.sendKeys(departurePlace);
 
-        try {
-            wait.until(ExpectedConditions.elementToBeClickable(fromCity)).click();
-        }
-        catch(StaleElementReferenceException e)
-        {
-            wait.until(ExpectedConditions.elementToBeClickable(
-                    By.xpath("(//div[@id='fromautoFill']/ul/li)[1]"))
-            ).click();
-
-        }
+        safeClick(fromCityLocator);
 
         toCityInputField.sendKeys(destinationPlace);
 
-        try {
-            wait.until(ExpectedConditions.elementToBeClickable(toCity)).click();
-        }
-        catch(StaleElementReferenceException e)
-        {
-            wait.until(ExpectedConditions.elementToBeClickable(
-                    By.xpath("(//div[@id='toautoFill']/ul/li)[1]"))
-            ).click();
-        }
+        safeClick(toCityLocator);
 
         departureDate.click();
     }
@@ -155,8 +129,6 @@ public class FlightsPage extends DriverInitialization {
     // TC5 - validating round trip functionality
     public void testingRoundTripFunctionality(String departurePlace,String destinationPlace) {
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
         roundtrip.click();
 
         try {
@@ -167,27 +139,11 @@ public class FlightsPage extends DriverInitialization {
         fromCityInputField.clear();
         fromCityInputField.sendKeys(departurePlace);
 
-        try {
-            wait.until(ExpectedConditions.elementToBeClickable(fromCity)).click();
-        }
-        catch(StaleElementReferenceException e)
-        {
-            wait.until(ExpectedConditions.elementToBeClickable(
-                    By.xpath("(//div[@id='fromautoFill']/ul/li)[1]"))
-            ).click();
-        }
+         safeClick(fromCityLocator);
 
         toCityInputField.sendKeys(destinationPlace);
 
-        try {
-            wait.until(ExpectedConditions.elementToBeClickable(toCity)).click();
-        }
-        catch(StaleElementReferenceException e)
-        {
-            wait.until(ExpectedConditions.elementToBeClickable(
-                    By.xpath("(//div[@id='toautoFill']/ul/li)[1]"))
-            ).click();
-        }
+          safeClick(toCityLocator);
 
         departureDate.click();
         selectReturnDateField.click();
@@ -211,4 +167,19 @@ public class FlightsPage extends DriverInitialization {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='QUC_TOTALFARE']")));
 
     }
+
+    public void safeClick(By locator) {
+        int attempts = 0;
+        while (attempts < 3) {
+            try {
+                WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+                element.click();
+                return;
+            } catch (StaleElementReferenceException e) {
+                attempts++;
+            }
+        }
+        throw new RuntimeException("Element kept going stale: " + locator);
+    }
+
 }

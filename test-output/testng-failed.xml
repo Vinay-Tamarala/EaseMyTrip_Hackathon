@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="utilities.ExtentReportManager"/>
+  </listeners>
+  <test thread-count="5" name="Run testNG(failed)">
+    <classes>
+      <class name="testCases.GiftCardTest">
+        <methods>
+          <include name="testInvalidAmount"/>
+          <include name="testLaterButton"/>
+          <include name="setUp"/>
+          <include name="testUnselectedLaterButton"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases.GiftCardTest -->
+      <class name="testCases.HomePageTest">
+        <methods>
+          <include name="testValidDetails"/>
+          <include name="testRoundTripFunctionality"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases.HomePageTest -->
+      <class name="testCases.HotelsPageTest">
+        <methods>
+          <include name="verifyMaxAdultCountFlow"/>
+          <include name="verifyAdultCountNotZero"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases.HotelsPageTest -->
+    </classes>
+  </test> <!-- Run testNG(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->
