@@ -13,7 +13,7 @@ import utilities.ConfigReader;
 import java.io.IOException;
 import java.util.List;
 
-public class FlightPage extends BasePage{
+public class FlightPage extends DriverInitialization {
     WebDriverWait wait;
     public FlightPage(WebDriver driver, WebDriverWait wait){
         super(driver);
