@@ -13,19 +13,19 @@ public class LoginPage extends BasePage{
         this.wait=wait;
     }
 
-    @FindBy(xpath="//*[@id='divSignInPnl']")
+    @FindBy(xpath="//div[@id='divSignInPnl']")
     WebElement loginBtn;
 
     @FindBy(xpath="//a[@class='_drpdubro log']")
     WebElement customerLog;
 
-    @FindBy(xpath="//*[@id='txtEmail']")
+    @FindBy(xpath="//input[@id='txtEmail']")
     WebElement loginEmail;
 
     @FindBy(xpath ="//input[@id='shwotp']")
     WebElement loginContinueBtn;
 
-    @FindBy(xpath="//*[@id='txtEmail2']")
+    @FindBy(xpath="//input[@id='txtEmail2']")
     WebElement loginPwd;
 
     @FindBy(xpath="//div[@class='_btnlog']/input[@value='Login' and not(@id)]")
