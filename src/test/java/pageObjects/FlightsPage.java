@@ -13,7 +13,7 @@ import utilities.Log;
 
 import java.time.Duration;
 
-public class FlightsPage extends BasePage{
+public class FlightsPage extends DriverInitialization {
 
 
     public FlightsPage(WebDriver driver){
@@ -144,7 +144,6 @@ public class FlightsPage extends BasePage{
         asserT.assertEquals(actualDefaultTraveller,expectedDefaultTraveller,
                 "Does not match");
         asserT.assertAll();
-        Log.info("Validated default traveller count.");
 
     }
 

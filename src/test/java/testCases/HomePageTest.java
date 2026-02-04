@@ -3,12 +3,14 @@ package testCases;
 import org.testng.annotations.Test;
 import testBase.BaseTest;
 import utilities.ConfigReader;
+import utilities.Log;
 
-public class EaseMyTrip extends BaseTest {
+public class HomePageTest extends BaseTest {
 
     @Test(priority = 1)
     public void validateDefaultTravellerCount(){
         flights.verifyDefaultTravellerCountAndClass();
+        Log.info("Validated default traveller count.");
     }
 
     @Test(priority = 2)

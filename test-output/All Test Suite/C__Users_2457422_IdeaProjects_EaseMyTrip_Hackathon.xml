@@ -4,11 +4,11 @@
   <testcase classname="testCases.LoginCase" name="invalidMailCase" time="1.307"/>
   <testcase classname="testCases.LoginCase" name="invalidPasswordCase" time="5.42"/>
   <testcase classname="testCases.LoginCase" name="validLoginTestCase" time="2.207"/>
-  <testcase classname="testCases.EaseMyTrip" name="validateDefaultTravellerCount" time="1.523"/>
-  <testcase classname="testCases.EaseMyTrip" name="testSameFromAndTo" time="9.708"/>
-  <testcase classname="testCases.EaseMyTrip" name="testSwitchCity" time="3.304"/>
-  <testcase classname="testCases.EaseMyTrip" name="testValidDetails" time="4.567"/>
-  <testcase classname="testCases.EaseMyTrip" name="testRoundTripFunctionality" time="12.314"/>
+  <testcase classname="testCases.HomePageTest" name="validateDefaultTravellerCount" time="1.523"/>
+  <testcase classname="testCases.HomePageTest" name="testSameFromAndTo" time="9.708"/>
+  <testcase classname="testCases.HomePageTest" name="testSwitchCity" time="3.304"/>
+  <testcase classname="testCases.HomePageTest" name="testValidDetails" time="4.567"/>
+  <testcase classname="testCases.HomePageTest" name="testRoundTripFunctionality" time="12.314"/>
   <testcase classname="testCases.FlightCases" name="flightCaseTest" time="22.21"/>
   <testcase classname="testCases.FlightCases" name="selectEmptyCoupon" time="2.087"/>
   <testcase classname="testCases.FlightCases" name="selectFlightDetailsCase" time="17.063"/>

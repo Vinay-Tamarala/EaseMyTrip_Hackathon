@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LoginPage extends BasePage{
+public class LoginPage extends DriverInitialization {
     WebDriverWait wait;
     public LoginPage(WebDriver driver,WebDriverWait wait){
         super(driver);

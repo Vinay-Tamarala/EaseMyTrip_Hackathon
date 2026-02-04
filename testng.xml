@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="C:/Users/2457422/IdeaProjects/EaseMyTrip_Hackathon">
+    <listeners>
+        <listener class-name="utilities.ExtentReportManager"/>
+    </listeners>
+    <test name="Run testNG">
         <classes>
             <class name="testCases.LoginTest">
                 <methods>
@@ -10,7 +13,7 @@
                     <include name="validLoginTestCase"/>
                 </methods>
             </class>
-            <class name="testCases.EaseMyTrip">
+            <class name="testCases.HomePageTest">
                 <methods>
                     <include name="validateDefaultTravellerCount"/>
                     <include name="testSameFromAndTo"/>

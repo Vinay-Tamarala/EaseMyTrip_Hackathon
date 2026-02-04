@@ -7,10 +7,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.CommonCode;
-import utilities.ConfigReader;
 
 
-public class CheckOutPage extends BasePage {
+public class CheckOutPage extends DriverInitialization {
     WebDriverWait wait;
     public CheckOutPage(WebDriver driver, WebDriverWait wait){
         super(driver);
