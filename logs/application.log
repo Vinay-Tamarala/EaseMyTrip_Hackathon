@@ -26,3 +26,23 @@
 2026-02-04 10:34:32 [main] INFO  Log - Round trip flow executed successfully with From: New Delhi and To: Mumbai
 2026-02-04 10:40:46 [main] INFO  Log - Validated default traveller count.
 2026-02-04 10:41:07 [main] INFO  Log - Round trip flow executed successfully with From: New Delhi and To: Mumbai
+2026-02-04 11:55:18 [main] INFO  Log - Test is passed to check whether the checkIn date and checkOut date is not same
+2026-02-04 11:56:28 [main] INFO  Log - Validated default traveller count.
+2026-02-04 12:13:37 [main] INFO  Log - Validated default traveller count.
+2026-02-04 12:14:00 [main] INFO  Log - Round trip flow executed successfully with From: New Delhi and To: Mumbai
+2026-02-04 12:17:36 [main] INFO  Log - Test is passed to check whether the adult count is more than 1
+2026-02-04 12:17:39 [main] INFO  Log - Test is passed to check whether the hotel navigation button is not failed to click
+2026-02-04 12:17:46 [main] INFO  Log - Check whether the max adult count is not zero by default
+2026-02-04 12:17:50 [main] INFO  Log - Test is passed to check whether the checkIn date and checkOut date is not same
+2026-02-04 12:27:45 [main] INFO  Log - Validated default traveller count.
+2026-02-04 12:28:02 [main] INFO  Log - Round trip flow executed successfully with From: New Delhi and To: Mumbai
+2026-02-04 12:30:43 [main] INFO  Log - Test is passed to check whether the adult count is more than 1
+2026-02-04 12:30:47 [main] INFO  Log - Test is passed to check whether the hotel navigation button is not failed to click
+2026-02-04 12:30:55 [main] INFO  Log - Check whether the max adult count is not zero by default
+2026-02-04 12:30:59 [main] INFO  Log - Test is passed to check whether the checkIn date and checkOut date is not same
+2026-02-04 12:33:02 [main] INFO  Log - Validated default traveller count.
+2026-02-04 12:33:25 [main] INFO  Log - Round trip flow executed successfully with From: New Delhi and To: Mumbai
+2026-02-04 12:35:53 [main] INFO  Log - Test is passed to check whether the adult count is more than 1
+2026-02-04 12:35:57 [main] INFO  Log - Test is passed to check whether the hotel navigation button is not failed to click
+2026-02-04 12:36:06 [main] INFO  Log - Check whether the max adult count is not zero by default
+2026-02-04 12:36:11 [main] INFO  Log - Test is passed to check whether the checkIn date and checkOut date is not same

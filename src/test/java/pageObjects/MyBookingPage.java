@@ -13,7 +13,6 @@ public class MyBookingPage extends DriverInitialization {
     public MyBookingPage(WebDriver driver, WebDriverWait wait) {
         super(driver);
         this.wait = wait;
-        PageFactory.initElements(driver, this);
     }
 
     @FindBy(xpath = "//input[@id='reffid']")

@@ -144,7 +144,6 @@ public class FlightsPage extends DriverInitialization {
         asserT.assertEquals(actualDefaultTraveller,expectedDefaultTraveller,
                 "Does not match");
         asserT.assertAll();
-        Log.info("Validated default traveller count.");
 
     }
 

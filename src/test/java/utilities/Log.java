@@ -19,7 +19,4 @@ public class Log {
 
         logger.debug(message);
     }
-
-
-
 }
