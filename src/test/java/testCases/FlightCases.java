@@ -11,6 +11,7 @@ public class FlightCases extends BaseTest {
         @Test(priority = 1)
         public void flightCaseTest() throws IOException {
             flights.addTravelDetails(ConfigReader.getProperty("fromCity"),ConfigReader.getProperty("toCity"));
+            flights.navigateToFlightsSearch();
             flightLocators.selectFilter();
             flightLocators.flightPrices();
             flightLocators.selectFlight();
