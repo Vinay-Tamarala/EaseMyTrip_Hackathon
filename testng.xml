@@ -12,7 +12,11 @@
             </class>
             <class name="testCases.EaseMyTrip">
                 <methods>
-                    <include name="testFlightsNavigation"/>
+                    <include name="validateDefaultTravellerCount"/>
+                    <include name="testSameFromAndTo"/>
+                    <include name="testSwitchCity"/>
+                    <include name="testValidDetails"/>
+                    <include name="testRoundTripFunctionality"/>
                 </methods>
             </class>
             <class name="testCases.FlightCases">
@@ -38,6 +42,11 @@
                     <include name="verifyAdultCountNotZero"/>
                     <include name="verifyCheckInAndCheckOutAreNotSame"/>
                 </methods>
+            </class>
+            <class name="testCases.MyBookingTest">
+            <methods>
+            <include name="verifyInvalidBookingDetails"/>
+            </methods>
             </class>
         </classes>
     </test>

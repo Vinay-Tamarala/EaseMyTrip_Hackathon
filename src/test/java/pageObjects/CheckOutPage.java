@@ -82,7 +82,9 @@ public class CheckOutPage extends BasePage {
     }
 
     public String enterCoupon(){
-        if(driver.findElement(By.xpath("//*[@id='divCouponApplied']")).isDisplayed()) {
+        try{
+            wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//div[text()='Remove' and not(@id)]"))));
+            System.out.println("Is the coupon already selected :" +driver.findElement(By.xpath("//div[text()='Remove' and not(@id)]")).isDisplayed() );
             cc.clickElement(remove);
             cc.clickElement(apply);
             Alert alert = driver.switchTo().alert();
@@ -90,7 +92,7 @@ public class CheckOutPage extends BasePage {
             alert.accept();
             return alertMsg;
         }
-        else {
+        catch (Exception e){
             cc.clickElement(apply);
             Alert alert = driver.switchTo().alert();
             String alertMsg = alert.getText();
