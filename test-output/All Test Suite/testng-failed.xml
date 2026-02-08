@@ -5,32 +5,27 @@
     <listener class-name="utilities.ExtentReportManager"/>
   </listeners>
   <test thread-count="5" name="Run testNG(failed)">
+    <groups>
+      <run>
+        <include name="login"/>
+      </run>
+    </groups>
     <classes>
-      <class name="testCases.GiftCardTest">
-        <methods>
-          <include name="testInvalidAmount"/>
-          <include name="testLaterButton"/>
-          <include name="setUp"/>
-          <include name="testUnselectedLaterButton"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- testCases.GiftCardTest -->
       <class name="testCases.HomePageTest">
         <methods>
           <include name="testValidDetails"/>
-          <include name="testRoundTripFunctionality"/>
           <include name="setUp"/>
+          <include name="testRoundTripFunctionality"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- testCases.HomePageTest -->
-      <class name="testCases.HotelsPageTest">
+      <class name="testCases.GiftCardTest">
         <methods>
-          <include name="verifyMaxAdultCountFlow"/>
-          <include name="verifyAdultCountNotZero"/>
+          <include name="testGiftCardPurchaseFlow"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- testCases.HotelsPageTest -->
+      </class> <!-- testCases.GiftCardTest -->
     </classes>
   </test> <!-- Run testNG(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->

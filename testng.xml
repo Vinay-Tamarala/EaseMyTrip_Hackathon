@@ -5,6 +5,11 @@
         <listener class-name="utilities.ExtentReportManager"/>
     </listeners>
     <test name="Run testNG">
+        <groups>
+            <run>
+                <include name="login"/>
+            </run>
+        </groups>
         <classes>
             <class name="testCases.LoginTest">
                 <methods>

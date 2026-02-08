@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="243.462" tests="21" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\2457355\IdeaProjects\EaseMyTrip_Hackathon\target\test-classes;C:\Users\2457355\IdeaProjects\EaseMyTrip_Hackathon\target\classes;C:\windows\system32\config\systemprofile\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-java\4.39.0\selenium-java-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-api\4.39.0\selenium-api-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.39.0\selenium-chrome-driver-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.39.0\selenium-chromium-driver-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-json\4.39.0\selenium-json-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.39.0\selenium-manager-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v141\4.39.0\selenium-devtools-v141-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v142\4.39.0\selenium-devtools-v142-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v143\4.39.0\selenium-devtools-v143-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.39.0\selenium-edge-driver-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.39.0\selenium-firefox-driver-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-http\4.39.0\selenium-http-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.39.0\selenium-ie-driver-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.39.0\selenium-remote-driver-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\com\google\guava\guava\33.5.0-jre\guava-33.5.0-jre.jar;C:\windows\system32\config\systemprofile\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\windows\system32\config\systemprofile\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\windows\system32\config\systemprofile\.m2\repository\com\google\errorprone\error_prone_annotations\2.41.0\error_prone_annotations-2.41.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\com\google\j2objc\j2objc-annotations\3.1\j2objc-annotations-3.1.jar;C:\windows\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-api\1.56.0\opentelemetry-api-1.56.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-context\1.56.0\opentelemetry-context-1.56.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-common\1.56.0\opentelemetry-common-1.56.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.56.0\opentelemetry-exporter-logging-1.56.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.56.0\opentelemetry-sdk-common-1.56.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.56.0\opentelemetry-sdk-extension-autoconfigure-spi-1.56.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.56.0\opentelemetry-sdk-extension-autoconfigure-1.56.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.56.0\opentelemetry-sdk-trace-1.56.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.56.0\opentelemetry-sdk-1.56.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.56.0\opentelemetry-sdk-metrics-1.56.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.56.0\opentelemetry-sdk-logs-1.56.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\net\bytebuddy\byte-buddy\1.18.2\byte-buddy-1.18.2.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-os\4.39.0\selenium-os-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-exec\1.6.0\commons-exec-1.6.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.39.0\selenium-safari-driver-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-support\4.39.0\selenium-support-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\apache\logging\log4j\log4j-core\2.25.3\log4j-core-2.25.3.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\apache\logging\log4j\log4j-api\2.25.3\log4j-api-2.25.3.jar;C:\windows\system32\config\systemprofile\.m2\repository\commons-io\commons-io\2.21.0\commons-io-2.21.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\apache\poi\poi-ooxml\5.2.5\poi-ooxml-5.2.5.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\apache\poi\poi-ooxml-lite\5.2.5\poi-ooxml-lite-5.2.5.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\apache\xmlbeans\xmlbeans\5.2.0\xmlbeans-5.2.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-compress\1.25.0\commons-compress-1.25.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\com\github\virtuald\curvesapi\1.08\curvesapi-1.08.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\apache\poi\poi\5.2.5\poi-5.2.5.jar;C:\windows\system32\config\systemprofile\.m2\repository\commons-codec\commons-codec\1.16.0\commons-codec-1.16.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\windows\system32\config\systemprofile\.m2\repository\com\zaxxer\SparseBitSet\1.3\SparseBitSet-1.3.jar;C:\windows\system32\config\systemprofile\.m2\repository\com\aventstack\extentreports\5.1.1\extentreports-5.1.1.jar;C:\windows\system32\config\systemprofile\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;C:\windows\system32\config\systemprofile\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
+    <property name="sun.java.command" value="C:\Windows\Temp\surefire1306950243210185980\surefirebooter-20260207221547982_3.jar C:\Windows\Temp\surefire1306950243210185980 2026-02-07T22-15-47_307-jvmRun1 surefire-20260207221547982_1tmp surefire_0-20260207221547982_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\2457355\IdeaProjects\EaseMyTrip_Hackathon\target\test-classes;C:\Users\2457355\IdeaProjects\EaseMyTrip_Hackathon\target\classes;C:\windows\system32\config\systemprofile\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-java\4.39.0\selenium-java-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-api\4.39.0\selenium-api-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.39.0\selenium-chrome-driver-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.39.0\selenium-chromium-driver-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-json\4.39.0\selenium-json-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.39.0\selenium-manager-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v141\4.39.0\selenium-devtools-v141-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v142\4.39.0\selenium-devtools-v142-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v143\4.39.0\selenium-devtools-v143-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.39.0\selenium-edge-driver-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.39.0\selenium-firefox-driver-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-http\4.39.0\selenium-http-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.39.0\selenium-ie-driver-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.39.0\selenium-remote-driver-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\com\google\guava\guava\33.5.0-jre\guava-33.5.0-jre.jar;C:\windows\system32\config\systemprofile\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\windows\system32\config\systemprofile\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\windows\system32\config\systemprofile\.m2\repository\com\google\errorprone\error_prone_annotations\2.41.0\error_prone_annotations-2.41.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\com\google\j2objc\j2objc-annotations\3.1\j2objc-annotations-3.1.jar;C:\windows\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-api\1.56.0\opentelemetry-api-1.56.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-context\1.56.0\opentelemetry-context-1.56.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-common\1.56.0\opentelemetry-common-1.56.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.56.0\opentelemetry-exporter-logging-1.56.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.56.0\opentelemetry-sdk-common-1.56.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.56.0\opentelemetry-sdk-extension-autoconfigure-spi-1.56.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.56.0\opentelemetry-sdk-extension-autoconfigure-1.56.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.56.0\opentelemetry-sdk-trace-1.56.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.56.0\opentelemetry-sdk-1.56.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.56.0\opentelemetry-sdk-metrics-1.56.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.56.0\opentelemetry-sdk-logs-1.56.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\net\bytebuddy\byte-buddy\1.18.2\byte-buddy-1.18.2.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-os\4.39.0\selenium-os-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-exec\1.6.0\commons-exec-1.6.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.39.0\selenium-safari-driver-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-support\4.39.0\selenium-support-4.39.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\apache\logging\log4j\log4j-core\2.25.3\log4j-core-2.25.3.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\apache\logging\log4j\log4j-api\2.25.3\log4j-api-2.25.3.jar;C:\windows\system32\config\systemprofile\.m2\repository\commons-io\commons-io\2.21.0\commons-io-2.21.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\apache\poi\poi-ooxml\5.2.5\poi-ooxml-5.2.5.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\apache\poi\poi-ooxml-lite\5.2.5\poi-ooxml-lite-5.2.5.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\apache\xmlbeans\xmlbeans\5.2.0\xmlbeans-5.2.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-compress\1.25.0\commons-compress-1.25.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\com\github\virtuald\curvesapi\1.08\curvesapi-1.08.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\apache\poi\poi\5.2.5\poi-5.2.5.jar;C:\windows\system32\config\systemprofile\.m2\repository\commons-codec\commons-codec\1.16.0\commons-codec-1.16.0.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\windows\system32\config\systemprofile\.m2\repository\com\zaxxer\SparseBitSet\1.3\SparseBitSet-1.3.jar;C:\windows\system32\config\systemprofile\.m2\repository\com\aventstack\extentreports\5.1.1\extentreports-5.1.1.jar;C:\windows\system32\config\systemprofile\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\windows\system32\config\systemprofile\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;C:\windows\system32\config\systemprofile\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\windows\system32\config\systemprofile"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-09-19"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-21"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\2457355\IdeaProjects\EaseMyTrip_Hackathon"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Windows\Temp\surefire1306950243210185980\surefirebooter-20260207221547982_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21+35-LTS-2513"/>
+    <property name="user.name" value="LTIN675316$"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\windows\system32\config\systemprofile\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\windows\TEMP\"/>
+    <property name="java.version" value="21"/>
+    <property name="user.dir" value="C:\Users\2457355\IdeaProjects\EaseMyTrip_Hackathon"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\ProgramData\Jenkins\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\Maven/bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\nodejs\;C:\windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="21+35-LTS-2513"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="flightCaseTest" classname="testCases.FlightsTest" time="22.078">
+    <system-out><![CDATA[Running tests on: CHROME
+2026-02-07 22:16:16 [main] INFO  Log - Starting Flights Test.
+2026-02-07 22:16:23 [main] INFO  Log - Selecting Airline Filter.
+2026-02-07 22:16:33 [main] INFO  Log - Prices[₹5,844, ₹5,844, ₹5,844, ₹5,844, ₹5,844, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹6,200, ₹6,200, ₹6,200, ₹6,200, ₹6,200, ₹6,200, ₹6,501, ₹6,677, ₹6,677, ₹6,827, ₹6,827, ₹7,074, ₹7,228, ₹7,474, ₹7,557, ₹7,730, ₹7,788, ₹8,866, ₹8,866, ₹8,866, ₹8,866, ₹8,866, ₹9,295, ₹9,605, ₹9,605, ₹10,629, ₹10,809, ₹10,809, ₹10,809, ₹10,809, ₹10,809, ₹10,809, ₹10,809, ₹10,925, ₹10,987, ₹11,379, ₹11,462, ₹11,462, ₹11,462, ₹11,462, ₹11,462, ₹11,462, ₹11,462, ₹11,462, ₹11,578, ₹11,901, ₹12,044, ₹12,321, ₹12,321, ₹12,321, ₹12,321, ₹12,321, ₹12,321, ₹12,321, ₹12,939, ₹13,741, ₹13,969, ₹14,315, ₹14,378, ₹14,473, ₹14,517, ₹14,584, ₹14,786, ₹14,943, ₹15,319, ₹16,199, ₹16,287, ₹16,287, ₹16,287, ₹16,287, ₹16,702, ₹16,745, ₹16,857, ₹17,308, ₹17,308, ₹20,548, ₹20,952, ₹20,967, ₹22,482, ₹22,482, ₹22,482, ₹22,482, ₹22,482, ₹22,482, ₹22,820, ₹22,820, ₹24,102, ₹24,102, ₹24,961, ₹25,677, ₹25,677, ₹25,677, ₹28,827, ₹35,127, ₹35,127]
+flightSelection: Screenshot has been captured.
+]]></system-out>
+    <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+2026-02-07T16:46:16.243693500Z main INFO Starting configuration XmlConfiguration[location=C:\Users\2457355\IdeaProjects\EaseMyTrip_Hackathon\target\test-classes\Log4j2.xml, lastModified=2026-02-02T09:13:48.107Z]...
+2026-02-07T16:46:16.245698600Z main INFO Configuration XmlConfiguration[location=C:\Users\2457355\IdeaProjects\EaseMyTrip_Hackathon\target\test-classes\Log4j2.xml, lastModified=2026-02-02T09:13:48.107Z] started.
+2026-02-07T16:46:16.250586700Z main INFO Stopping configuration org.apache.logging.log4j.core.config.DefaultConfiguration@452e26d0...
+2026-02-07T16:46:16.251588400Z main INFO Configuration org.apache.logging.log4j.core.config.DefaultConfiguration@452e26d0 stopped.
+]]></system-err>
+  </testcase>
+  <testcase name="selectEmptyCoupon" classname="testCases.FlightsTest" time="1.509">
+    <system-out><![CDATA[flightDetails: Screenshot has been captured.
+2026-02-07 22:16:37 [main] INFO  Log - Selecting Empty Coupon.
+Is the coupon already selected :true
+2026-02-07 22:16:39 [main] INFO  Log - Alert message is :Please enter coupon code
+]]></system-out>
+  </testcase>
+  <testcase name="selectFlightDetailsCase" classname="testCases.FlightsTest" time="16.453">
+    <system-out><![CDATA[travellerDetails: Screenshot has been captured.
+2026-02-07 22:16:40 [main] INFO  Log - Filling Traveller Details.
+]]></system-out>
+  </testcase>
+  <testcase name="payCases" classname="testCases.FlightsTest" time="8.29">
+    <system-out><![CDATA[2026-02-07 22:16:55 [main] INFO  Log - Asserting Traveller Details.
+flightPayment: Screenshot has been captured.
+]]></system-out>
+  </testcase>
+  <testcase name="testGiftCardPurchaseFlow" classname="testCases.GiftCardTest" time="11.107">
+    <system-out><![CDATA[Running tests on: CHROME
+]]></system-out>
+  </testcase>
+  <testcase name="testInvalidAmount" classname="testCases.GiftCardTest" time="7.041"/>
+  <testcase name="testLaterButton" classname="testCases.GiftCardTest" time="6.93"/>
+  <testcase name="testUnselectedLaterButton" classname="testCases.GiftCardTest" time="7.331"/>
+  <testcase name="validateDefaultTravellerCount" classname="testCases.HomePageTest" time="0.223">
+    <system-out><![CDATA[Running tests on: CHROME
+2026-02-07 22:17:58 [main] INFO  Log - Validated default traveller count.
+]]></system-out>
+  </testcase>
+  <testcase name="testSameFromAndTo" classname="testCases.HomePageTest" time="12.286">
+    <system-out><![CDATA[SameFromToCity: Screenshot has been captured.
+Error message displayed when same departure and destination location is selected : Source And Destination Can Not Be Same
+]]></system-out>
+  </testcase>
+  <testcase name="testSwitchCity" classname="testCases.HomePageTest" time="3.87">
+    <system-out><![CDATA[SwitchCity: Screenshot has been captured.
+]]></system-out>
+  </testcase>
+  <testcase name="testValidDetails" classname="testCases.HomePageTest" time="9.833">
+    <system-out><![CDATA[ValidSearchDetails: Screenshot has been captured.
+]]></system-out>
+  </testcase>
+  <testcase name="testRoundTripFunctionality" classname="testCases.HomePageTest" time="11.197">
+    <system-out><![CDATA[2026-02-07 22:18:28 [main] INFO  Log - Round trip flow executed successfully with From: New Delhi and To: Mumbai
+RoundTripSearch: Screenshot has been captured.
+]]></system-out>
+  </testcase>
+  <testcase name="verifyMaxAdultCountFlow" classname="testCases.HotelsPageTest" time="13.674">
+    <system-out><![CDATA[Running tests on: CHROME
+Max adult count is: 2
+2026-02-07 22:18:59 [main] INFO  Log - Test is passed to check whether the adult count is more than 1
+]]></system-out>
+  </testcase>
+  <testcase name="verifyHotelsNavigation" classname="testCases.HotelsPageTest" time="2.404">
+    <system-out><![CDATA[2026-02-07 22:19:02 [main] INFO  Log - Test is passed to check whether the hotel navigation button is not failed to click
+]]></system-out>
+  </testcase>
+  <testcase name="verifyAdultCountNotZero" classname="testCases.HotelsPageTest" time="15.792">
+    <failure message="element not interactable&#10;  (Session info: chrome=142.0.7444.176)&#10;Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;&#10;System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [76028de301b44cf79cf645ce57e15902, clickElement {id=f.70BBDEF006C40837DDEBD74660D16CB3.d.8C83EE4F52C99E56BBEC07B4B4D82C08.e.747}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53361}, goog:processID: 5056, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53361/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on windows (76028de301b44cf79cf645ce57e15902)] -&gt; id: Adults_room_1_1_plus]&#10;Session ID: 76028de301b44cf79cf645ce57e15902" type="org.openqa.selenium.ElementNotInteractableException"><![CDATA[org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=142.0.7444.176)
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [76028de301b44cf79cf645ce57e15902, clickElement {id=f.70BBDEF006C40837DDEBD74660D16CB3.d.8C83EE4F52C99E56BBEC07B4B4D82C08.e.747}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53361}, goog:processID: 5056, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53361/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (76028de301b44cf79cf645ce57e15902)] -> id: Adults_room_1_1_plus]
+Session ID: 76028de301b44cf79cf645ce57e15902
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy9.click(Unknown Source)
+	at pageObjects.HotelsPage.IncreamentAdult(HotelsPage.java:77)
+	at testCases.HotelsPageTest.verifyAdultCountNotZero(HotelsPageTest.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+  </testcase>
+  <testcase name="verifyCheckInAndCheckOutAreNotSame" classname="testCases.HotelsPageTest" time="4.915">
+    <system-out><![CDATA[Check-In Day: 12
+Check-Out Day: 14
+2026-02-07 22:19:22 [main] INFO  Log - Test is passed to check whether the checkIn date and checkOut date is not same
+]]></system-out>
+  </testcase>
+  <testcase name="invalidMailCase" classname="testCases.LoginTest" time="1.753">
+    <system-out><![CDATA[Running tests on: CHROME
+2026-02-07 22:19:30 [main] INFO  Log - Starting Login Test.
+2026-02-07 22:19:32 [main] INFO  Log - Entering Invalid Mail and Clicking on Continue.
+2026-02-07 22:19:32 [main] INFO  Log - Error is :* Enter a valid Email
+]]></system-out>
+  </testcase>
+  <testcase name="invalidPasswordCase" classname="testCases.LoginTest" time="4.223">
+    <system-out><![CDATA[2026-02-07 22:19:32 [main] INFO  Log - Entering Valid Mail and Invalid Password and Clicking on Continue.
+2026-02-07 22:19:36 [main] INFO  Log - Error is :Please enter correct password.
+]]></system-out>
+  </testcase>
+  <testcase name="validLoginTestCase" classname="testCases.LoginTest" time="2.118">
+    <system-out><![CDATA[2026-02-07 22:19:37 [main] INFO  Log - Entering Valid Mail and Valid Password and Clicking on Continue.
+]]></system-out>
+  </testcase>
+  <testcase name="verifyInvalidBookingDetails" classname="testCases.MyBookingTest" time="9.879">
+    <system-out><![CDATA[Running tests on: CHROME
+]]></system-out>
+  </testcase>
+</testsuite>

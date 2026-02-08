@@ -28,7 +28,7 @@ public class BaseTest {
     protected MyBookingPage myBookingPage;
     public CommonCode cc;
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void setUp() {
         String browser = ConfigReader.getProperty("browser").toLowerCase();
         String baseUrl = ConfigReader.getProperty("baseUrl");
@@ -67,7 +67,7 @@ public class BaseTest {
         System.out.println("Running tests on: " + browser.toUpperCase());
     }
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void tearDown() {
         if (driver != null) {
             driver.quit();

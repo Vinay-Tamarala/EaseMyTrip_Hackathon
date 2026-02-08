@@ -1,151 +1,342 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="21" passed="21" failed="0" skipped="0">
+<testng-results ignored="0" total="21" passed="18" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-04T15:27:28 IST" name="All Test Suite" finished-at="2026-02-04T15:31:45 IST" duration-ms="256903">
+  <suite started-at="2026-02-07T22:45:03 IST" name="All Test Suite" finished-at="2026-02-07T22:50:59 IST" duration-ms="356797">
     <groups>
+      <group name="login">
+        <method signature="LoginTest.invalidMailCase()[pri:1, instance:testCases.LoginTest@411f53a0]" name="invalidMailCase" class="testCases.LoginTest"/>
+        <method signature="LoginTest.invalidPasswordCase()[pri:2, instance:testCases.LoginTest@411f53a0]" name="invalidPasswordCase" class="testCases.LoginTest"/>
+        <method signature="LoginTest.validLoginTestCase()[pri:3, instance:testCases.LoginTest@411f53a0]" name="validLoginTestCase" class="testCases.LoginTest"/>
+      </group> <!-- login -->
     </groups>
-    <test started-at="2026-02-04T15:27:28 IST" name="Run testNG" finished-at="2026-02-04T15:31:45 IST" duration-ms="256903">
+    <test started-at="2026-02-07T22:45:03 IST" name="Run testNG" finished-at="2026-02-07T22:50:59 IST" duration-ms="356797">
       <class name="testCases.GiftCardTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.GiftCardTest@1ce24091]" started-at="2026-02-04T15:29:42 IST" name="setUp" finished-at="2026-02-04T15:29:51 IST" duration-ms="8783" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.GiftCardTest@44c03695]" started-at="2026-02-07T22:48:14 IST" name="setUp" finished-at="2026-02-07T22:48:25 IST" duration-ms="11629" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testGiftCardPurchaseFlow()[pri:1, instance:testCases.GiftCardTest@1ce24091]" started-at="2026-02-04T15:29:51 IST" name="testGiftCardPurchaseFlow" finished-at="2026-02-04T15:30:04 IST" duration-ms="13379" status="PASS">
+        <test-method signature="testGiftCardPurchaseFlow()[pri:1, instance:testCases.GiftCardTest@44c03695]" started-at="2026-02-07T22:48:25 IST" name="testGiftCardPurchaseFlow" finished-at="2026-02-07T22:48:42 IST" duration-ms="16805" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (a1e76806623d3a4738de976860a8bab2)] -> xpath: //span[text()='Gift Card']] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\2457355\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64155}, goog:processID: 14136, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64155/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a1e76806623d3a4738de976860a8bab2]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (a1e76806623d3a4738de976860a8bab2)] -> xpath: //span[text()='Gift Card']] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\2457355\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64155}, goog:processID: 14136, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64155/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a1e76806623d3a4738de976860a8bab2
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at pageObjects.HomePage.navigateToGiftCard(HomePage.java:41)
+at testCases.GiftCardTest.testGiftCardPurchaseFlow(GiftCardTest.java:15)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGiftCardPurchaseFlow -->
-        <test-method signature="testInvalidAmount()[pri:2, instance:testCases.GiftCardTest@1ce24091]" started-at="2026-02-04T15:30:04 IST" name="testInvalidAmount" finished-at="2026-02-04T15:30:10 IST" duration-ms="5798" status="PASS">
+        <test-method signature="testInvalidAmount()[pri:2, instance:testCases.GiftCardTest@44c03695]" started-at="2026-02-07T22:48:42 IST" name="testInvalidAmount" finished-at="2026-02-07T22:48:57 IST" duration-ms="15324" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInvalidAmount -->
-        <test-method signature="testLaterButton()[pri:3, instance:testCases.GiftCardTest@1ce24091]" started-at="2026-02-04T15:30:10 IST" name="testLaterButton" finished-at="2026-02-04T15:30:17 IST" duration-ms="7007" status="PASS">
+        <test-method signature="testLaterButton()[pri:3, instance:testCases.GiftCardTest@44c03695]" started-at="2026-02-07T22:48:57 IST" name="testLaterButton" finished-at="2026-02-07T22:49:09 IST" duration-ms="11280" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLaterButton -->
-        <test-method signature="testUnselectedLaterButton()[pri:4, instance:testCases.GiftCardTest@1ce24091]" started-at="2026-02-04T15:30:17 IST" name="testUnselectedLaterButton" finished-at="2026-02-04T15:30:24 IST" duration-ms="6489" status="PASS">
+        <test-method signature="testUnselectedLaterButton()[pri:4, instance:testCases.GiftCardTest@44c03695]" started-at="2026-02-07T22:49:09 IST" name="testUnselectedLaterButton" finished-at="2026-02-07T22:49:18 IST" duration-ms="9520" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUnselectedLaterButton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.GiftCardTest@1ce24091]" started-at="2026-02-04T15:30:24 IST" name="tearDown" finished-at="2026-02-04T15:30:32 IST" duration-ms="8378" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.GiftCardTest@44c03695]" started-at="2026-02-07T22:49:18 IST" name="tearDown" finished-at="2026-02-07T22:49:25 IST" duration-ms="6677" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCases.GiftCardTest -->
       <class name="testCases.HotelsPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.HotelsPageTest@1ff4931d]" started-at="2026-02-04T15:30:32 IST" name="setUp" finished-at="2026-02-04T15:30:41 IST" duration-ms="8966" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.HotelsPageTest@7dcf94f8]" started-at="2026-02-07T22:49:25 IST" name="setUp" finished-at="2026-02-07T22:49:36 IST" duration-ms="10768" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyMaxAdultCountFlow()[pri:1, instance:testCases.HotelsPageTest@1ff4931d]" started-at="2026-02-04T15:30:41 IST" name="verifyMaxAdultCountFlow" finished-at="2026-02-04T15:30:56 IST" duration-ms="14857" status="PASS">
+        <test-method signature="verifyMaxAdultCountFlow()[pri:1, instance:testCases.HotelsPageTest@7dcf94f8]" started-at="2026-02-07T22:49:36 IST" name="verifyMaxAdultCountFlow" finished-at="2026-02-07T22:49:46 IST" duration-ms="9999" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyMaxAdultCountFlow -->
-        <test-method signature="verifyHotelsNavigation()[pri:2, instance:testCases.HotelsPageTest@1ff4931d]" started-at="2026-02-04T15:30:56 IST" name="verifyHotelsNavigation" finished-at="2026-02-04T15:30:58 IST" duration-ms="1699" status="PASS">
+        <test-method signature="verifyHotelsNavigation()[pri:2, instance:testCases.HotelsPageTest@7dcf94f8]" started-at="2026-02-07T22:49:46 IST" name="verifyHotelsNavigation" finished-at="2026-02-07T22:49:50 IST" duration-ms="4501" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHotelsNavigation -->
-        <test-method signature="verifyAdultCountNotZero()[pri:3, instance:testCases.HotelsPageTest@1ff4931d]" started-at="2026-02-04T15:30:58 IST" name="verifyAdultCountNotZero" finished-at="2026-02-04T15:31:05 IST" duration-ms="7669" status="PASS">
+        <test-method signature="verifyAdultCountNotZero()[pri:3, instance:testCases.HotelsPageTest@7dcf94f8]" started-at="2026-02-07T22:49:50 IST" name="verifyAdultCountNotZero" finished-at="2026-02-07T22:50:02 IST" duration-ms="11338" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAdultCountNotZero -->
-        <test-method signature="verifyCheckInAndCheckOutAreNotSame()[pri:4, instance:testCases.HotelsPageTest@1ff4931d]" started-at="2026-02-04T15:31:05 IST" name="verifyCheckInAndCheckOutAreNotSame" finished-at="2026-02-04T15:31:10 IST" duration-ms="4371" status="PASS">
+        <test-method signature="verifyCheckInAndCheckOutAreNotSame()[pri:4, instance:testCases.HotelsPageTest@7dcf94f8]" started-at="2026-02-07T22:50:02 IST" name="verifyCheckInAndCheckOutAreNotSame" finished-at="2026-02-07T22:50:08 IST" duration-ms="6164" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCheckInAndCheckOutAreNotSame -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.HotelsPageTest@1ff4931d]" started-at="2026-02-04T15:31:10 IST" name="tearDown" finished-at="2026-02-04T15:31:17 IST" duration-ms="7461" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.HotelsPageTest@7dcf94f8]" started-at="2026-02-07T22:50:08 IST" name="tearDown" finished-at="2026-02-07T22:50:18 IST" duration-ms="10146" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCases.HotelsPageTest -->
       <class name="testCases.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.LoginTest@31190526]" started-at="2026-02-04T15:27:29 IST" name="setUp" finished-at="2026-02-04T15:27:40 IST" duration-ms="11346" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.LoginTest@411f53a0]" started-at="2026-02-07T22:45:03 IST" name="setUp" finished-at="2026-02-07T22:45:20 IST" duration-ms="16594" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="invalidMailCase()[pri:1, instance:testCases.LoginTest@31190526]" started-at="2026-02-04T15:27:40 IST" name="invalidMailCase" finished-at="2026-02-04T15:27:43 IST" duration-ms="2708" status="PASS">
+        <test-method signature="invalidMailCase()[pri:1, instance:testCases.LoginTest@411f53a0]" started-at="2026-02-07T22:45:20 IST" name="invalidMailCase" finished-at="2026-02-07T22:45:24 IST" duration-ms="4445" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidMailCase -->
-        <test-method signature="invalidPasswordCase()[pri:2, instance:testCases.LoginTest@31190526]" started-at="2026-02-04T15:27:43 IST" name="invalidPasswordCase" finished-at="2026-02-04T15:27:47 IST" duration-ms="4853" status="PASS">
+        <test-method signature="invalidPasswordCase()[pri:2, instance:testCases.LoginTest@411f53a0]" started-at="2026-02-07T22:45:24 IST" name="invalidPasswordCase" finished-at="2026-02-07T22:45:31 IST" duration-ms="6440" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidPasswordCase -->
-        <test-method signature="validLoginTestCase()[pri:3, instance:testCases.LoginTest@31190526]" started-at="2026-02-04T15:27:48 IST" name="validLoginTestCase" finished-at="2026-02-04T15:27:50 IST" duration-ms="2216" status="PASS">
+        <test-method signature="validLoginTestCase()[pri:3, instance:testCases.LoginTest@411f53a0]" started-at="2026-02-07T22:45:31 IST" name="validLoginTestCase" finished-at="2026-02-07T22:45:35 IST" duration-ms="4176" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLoginTestCase -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.LoginTest@31190526]" started-at="2026-02-04T15:27:50 IST" name="tearDown" finished-at="2026-02-04T15:27:56 IST" duration-ms="6362" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.LoginTest@411f53a0]" started-at="2026-02-07T22:45:35 IST" name="tearDown" finished-at="2026-02-07T22:45:43 IST" duration-ms="8574" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCases.LoginTest -->
       <class name="testCases.MyBookingTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.MyBookingTest@d35dea7]" started-at="2026-02-04T15:31:17 IST" name="setUp" finished-at="2026-02-04T15:31:27 IST" duration-ms="9954" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.MyBookingTest@6f03482]" started-at="2026-02-07T22:50:18 IST" name="setUp" finished-at="2026-02-07T22:50:32 IST" duration-ms="13749" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyInvalidBookingDetails()[pri:0, instance:testCases.MyBookingTest@d35dea7]" started-at="2026-02-04T15:31:27 IST" name="verifyInvalidBookingDetails" finished-at="2026-02-04T15:31:37 IST" duration-ms="10186" status="PASS">
+        <test-method signature="verifyInvalidBookingDetails()[pri:0, instance:testCases.MyBookingTest@6f03482]" started-at="2026-02-07T22:50:32 IST" name="verifyInvalidBookingDetails" finished-at="2026-02-07T22:50:53 IST" duration-ms="21418" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyInvalidBookingDetails -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.MyBookingTest@d35dea7]" started-at="2026-02-04T15:31:37 IST" name="tearDown" finished-at="2026-02-04T15:31:45 IST" duration-ms="7872" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.MyBookingTest@6f03482]" started-at="2026-02-07T22:50:53 IST" name="tearDown" finished-at="2026-02-07T22:50:59 IST" duration-ms="6445" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCases.MyBookingTest -->
       <class name="testCases.FlightsTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.FlightsTest@4b2bac3f]" started-at="2026-02-04T15:28:39 IST" name="setUp" finished-at="2026-02-04T15:28:48 IST" duration-ms="8732" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.FlightsTest@6025e1b6]" started-at="2026-02-07T22:46:49 IST" name="setUp" finished-at="2026-02-07T22:47:01 IST" duration-ms="11864" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="flightCaseTest()[pri:1, instance:testCases.FlightsTest@4b2bac3f]" started-at="2026-02-04T15:28:48 IST" name="flightCaseTest" finished-at="2026-02-04T15:29:08 IST" duration-ms="20712" status="PASS">
+        <test-method signature="flightCaseTest()[pri:1, instance:testCases.FlightsTest@6025e1b6]" started-at="2026-02-07T22:47:01 IST" name="flightCaseTest" finished-at="2026-02-07T22:47:31 IST" duration-ms="30301" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flightCaseTest -->
-        <test-method signature="selectEmptyCoupon()[pri:2, instance:testCases.FlightsTest@4b2bac3f]" started-at="2026-02-04T15:29:08 IST" name="selectEmptyCoupon" finished-at="2026-02-04T15:29:10 IST" duration-ms="1834" status="PASS">
+        <test-method signature="selectEmptyCoupon()[pri:2, instance:testCases.FlightsTest@6025e1b6]" started-at="2026-02-07T22:47:31 IST" name="selectEmptyCoupon" finished-at="2026-02-07T22:47:33 IST" duration-ms="1669" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectEmptyCoupon -->
-        <test-method signature="selectFlightDetailsCase()[pri:3, instance:testCases.FlightsTest@4b2bac3f]" started-at="2026-02-04T15:29:10 IST" name="selectFlightDetailsCase" finished-at="2026-02-04T15:29:27 IST" duration-ms="16750" status="PASS">
+        <test-method signature="selectFlightDetailsCase()[pri:3, instance:testCases.FlightsTest@6025e1b6]" started-at="2026-02-07T22:47:33 IST" name="selectFlightDetailsCase" finished-at="2026-02-07T22:47:52 IST" duration-ms="19116" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectFlightDetailsCase -->
-        <test-method signature="payCases()[pri:4, instance:testCases.FlightsTest@4b2bac3f]" started-at="2026-02-04T15:29:27 IST" name="payCases" finished-at="2026-02-04T15:29:34 IST" duration-ms="7115" status="PASS">
+        <test-method signature="payCases()[pri:4, instance:testCases.FlightsTest@6025e1b6]" started-at="2026-02-07T22:47:52 IST" name="payCases" finished-at="2026-02-07T22:48:05 IST" duration-ms="13009" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- payCases -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.FlightsTest@4b2bac3f]" started-at="2026-02-04T15:29:34 IST" name="tearDown" finished-at="2026-02-04T15:29:42 IST" duration-ms="8030" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.FlightsTest@6025e1b6]" started-at="2026-02-07T22:48:05 IST" name="tearDown" finished-at="2026-02-07T22:48:14 IST" duration-ms="8696" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCases.FlightsTest -->
       <class name="testCases.HomePageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.HomePageTest@4116aac9]" started-at="2026-02-04T15:27:56 IST" name="setUp" finished-at="2026-02-04T15:28:05 IST" duration-ms="8423" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.HomePageTest@c730b35]" started-at="2026-02-07T22:45:43 IST" name="setUp" finished-at="2026-02-07T22:46:00 IST" duration-ms="16900" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validateDefaultTravellerCount()[pri:1, instance:testCases.HomePageTest@4116aac9]" started-at="2026-02-04T15:28:05 IST" name="validateDefaultTravellerCount" finished-at="2026-02-04T15:28:05 IST" duration-ms="153" status="PASS">
+        <test-method signature="validateDefaultTravellerCount()[pri:1, instance:testCases.HomePageTest@c730b35]" started-at="2026-02-07T22:46:00 IST" name="validateDefaultTravellerCount" finished-at="2026-02-07T22:46:02 IST" duration-ms="1218" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateDefaultTravellerCount -->
-        <test-method signature="testSameFromAndTo()[pri:2, instance:testCases.HomePageTest@4116aac9]" started-at="2026-02-04T15:28:05 IST" name="testSameFromAndTo" finished-at="2026-02-04T15:28:14 IST" duration-ms="9452" status="PASS">
+        <test-method signature="testSameFromAndTo()[pri:2, instance:testCases.HomePageTest@c730b35]" started-at="2026-02-07T22:46:02 IST" name="testSameFromAndTo" finished-at="2026-02-07T22:46:30 IST" duration-ms="28137" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSameFromAndTo -->
-        <test-method signature="testSwitchCity()[pri:3, instance:testCases.HomePageTest@4116aac9]" started-at="2026-02-04T15:28:14 IST" name="testSwitchCity" finished-at="2026-02-04T15:28:17 IST" duration-ms="3338" status="PASS">
+        <test-method signature="testSwitchCity()[pri:3, instance:testCases.HomePageTest@c730b35]" started-at="2026-02-07T22:46:30 IST" name="testSwitchCity" finished-at="2026-02-07T22:46:37 IST" duration-ms="7575" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSwitchCity -->
-        <test-method signature="testValidDetails()[pri:4, instance:testCases.HomePageTest@4116aac9]" started-at="2026-02-04T15:28:17 IST" name="testValidDetails" finished-at="2026-02-04T15:28:24 IST" duration-ms="6766" status="PASS">
+        <test-method signature="testValidDetails()[pri:4, instance:testCases.HomePageTest@c730b35]" started-at="2026-02-07T22:46:37 IST" name="testValidDetails" finished-at="2026-02-07T22:46:40 IST" duration-ms="3118" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: stale element not found in the current frame
+  (Session info: chrome=142.0.7444.176)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [39da1265d390bf1e87c3249bc6cde542, clickElement {id=f.DA10B1A733370173277BCE041C55DF43.d.2796A59DA4213BCF49EBB036815137F6.e.649}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\2457355\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53381}, goog:processID: 14324, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53381/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (39da1265d390bf1e87c3249bc6cde542)] -> xpath: //li[@id='snd_6_14/02/2026']]
+Session ID: 39da1265d390bf1e87c3249bc6cde542]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=142.0.7444.176)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [39da1265d390bf1e87c3249bc6cde542, clickElement {id=f.DA10B1A733370173277BCE041C55DF43.d.2796A59DA4213BCF49EBB036815137F6.e.649}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\2457355\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53381}, goog:processID: 14324, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53381/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (39da1265d390bf1e87c3249bc6cde542)] -> xpath: //li[@id='snd_6_14/02/2026']]
+Session ID: 39da1265d390bf1e87c3249bc6cde542
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
+at pageObjects.FlightsPage.addTravelDetails(FlightsPage.java:82)
+at testCases.HomePageTest.testValidDetails(HomePageTest.java:36)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidDetails -->
-        <test-method signature="testRoundTripFunctionality()[pri:5, instance:testCases.HomePageTest@4116aac9]" started-at="2026-02-04T15:28:24 IST" name="testRoundTripFunctionality" finished-at="2026-02-04T15:28:32 IST" duration-ms="7286" status="PASS">
+        <test-method signature="testRoundTripFunctionality()[pri:5, instance:testCases.HomePageTest@c730b35]" started-at="2026-02-07T22:46:40 IST" name="testRoundTripFunctionality" finished-at="2026-02-07T22:46:42 IST" duration-ms="1281" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <li id="rtrip" class="trip_type flig-show" onclick="setType('R');" aria-label="Round Trip" role="tab" tabindex="0">...</li> is not clickable at point (177, 11). Other element would receive the click: <div class="overlaybg1" id="overlaybg1" style="display: block;"></div>
+  (Session info: chrome=142.0.7444.176)
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [39da1265d390bf1e87c3249bc6cde542, clickElement {id=f.DA10B1A733370173277BCE041C55DF43.d.2796A59DA4213BCF49EBB036815137F6.e.665}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\2457355\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53381}, goog:processID: 14324, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53381/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (39da1265d390bf1e87c3249bc6cde542)] -> xpath: //li[@id='rtrip']]
+Session ID: 39da1265d390bf1e87c3249bc6cde542]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <li id="rtrip" class="trip_type flig-show" onclick="setType('R');" aria-label="Round Trip" role="tab" tabindex="0">...</li> is not clickable at point (177, 11). Other element would receive the click: <div class="overlaybg1" id="overlaybg1" style="display: block;"></div>
+  (Session info: chrome=142.0.7444.176)
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [39da1265d390bf1e87c3249bc6cde542, clickElement {id=f.DA10B1A733370173277BCE041C55DF43.d.2796A59DA4213BCF49EBB036815137F6.e.665}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\2457355\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53381}, goog:processID: 14324, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53381/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (39da1265d390bf1e87c3249bc6cde542)] -> xpath: //li[@id='rtrip']]
+Session ID: 39da1265d390bf1e87c3249bc6cde542
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
+at pageObjects.FlightsPage.testingRoundTripFunctionality(FlightsPage.java:132)
+at testCases.HomePageTest.testRoundTripFunctionality(HomePageTest.java:44)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRoundTripFunctionality -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.HomePageTest@4116aac9]" started-at="2026-02-04T15:28:32 IST" name="tearDown" finished-at="2026-02-04T15:28:39 IST" duration-ms="7442" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.HomePageTest@c730b35]" started-at="2026-02-07T22:46:42 IST" name="tearDown" finished-at="2026-02-07T22:46:49 IST" duration-ms="7230" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

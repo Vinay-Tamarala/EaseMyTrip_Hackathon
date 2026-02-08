@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-All_Test_Suite" class="navigator-link">
-              <span class="suite-name border-passed">All Test Suite</span>
+              <span class="suite-name border-failed">All Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-All_Test_Suite" class="navigator-link ">
-                    <span>0 groups</span>
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">21 methods,   21 passed</span>
+                    <span class="method-stats">21 methods, 3 failed,   18 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-All_Test_Suite" class="hide-methods failed suite-All_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-All_Test_Suite -->
+                      <a href="#" panel-name="suite-All_Test_Suite" class="show-methods failed suite-All_Test_Suite"> (show)</a> <!-- show-methods failed suite-All_Test_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-All_Test_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="testCases.GiftCardTest" class="method navigator-link" hash-for-method="testGiftCardPurchaseFlow">testGiftCardPurchaseFlow</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="testCases.HomePageTest" class="method navigator-link" hash-for-method="testRoundTripFunctionality">testRoundTripFunctionality</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="testCases.HomePageTest" class="method navigator-link" hash-for-method="testValidDetails">testValidDetails</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-All_Test_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -133,22 +157,12 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-All_Test_Suite" title="testCases.GiftCardTest" class="method navigator-link" hash-for-method="testGiftCardPurchaseFlow">testGiftCardPurchaseFlow</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-All_Test_Suite" title="testCases.GiftCardTest" class="method navigator-link" hash-for-method="testInvalidAmount">testInvalidAmount</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-All_Test_Suite" title="testCases.GiftCardTest" class="method navigator-link" hash-for-method="testLaterButton">testLaterButton</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-All_Test_Suite" title="testCases.HomePageTest" class="method navigator-link" hash-for-method="testRoundTripFunctionality">testRoundTripFunctionality</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -164,11 +178,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-All_Test_Suite" title="testCases.GiftCardTest" class="method navigator-link" hash-for-method="testUnselectedLaterButton">testUnselectedLaterButton</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-All_Test_Suite" title="testCases.HomePageTest" class="method navigator-link" hash-for-method="testValidDetails">testValidDetails</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -218,6 +227,171 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-All_Test_Suite" class="panel All_Test_Suite">
+          <div class="suite-All_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testCases.HomePageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRoundTripFunctionality">
+                  </a> <!-- testRoundTripFunctionality -->
+                  <span class="method-name">testRoundTripFunctionality</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;li id=&quot;rtrip&quot; class=&quot;trip_type flig-show&quot; onclick=&quot;setType(&apos;R&apos;);&quot; aria-label=&quot;Round Trip&quot; role=&quot;tab&quot; tabindex=&quot;0&quot;&gt;...&lt;/li&gt; is not clickable at point (177, 11). Other element would receive the click: &lt;div class=&quot;overlaybg1&quot; id=&quot;overlaybg1&quot; style=&quot;display: block;&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=142.0.7444.176)
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [39da1265d390bf1e87c3249bc6cde542, clickElement {id=f.DA10B1A733370173277BCE041C55DF43.d.2796A59DA4213BCF49EBB036815137F6.e.665}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\2457355\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53381}, goog:processID: 14324, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53381/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (39da1265d390bf1e87c3249bc6cde542)] -&gt; xpath: //li[@id=&apos;rtrip&apos;]]
+Session ID: 39da1265d390bf1e87c3249bc6cde542
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
+	at pageObjects.FlightsPage.testingRoundTripFunctionality(FlightsPage.java:132)
+	at testCases.HomePageTest.testRoundTripFunctionality(HomePageTest.java:44)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testValidDetails">
+                  </a> <!-- testValidDetails -->
+                  <span class="method-name">testValidDetails</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=142.0.7444.176)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [39da1265d390bf1e87c3249bc6cde542, clickElement {id=f.DA10B1A733370173277BCE041C55DF43.d.2796A59DA4213BCF49EBB036815137F6.e.649}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\2457355\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53381}, goog:processID: 14324, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53381/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (39da1265d390bf1e87c3249bc6cde542)] -&gt; xpath: //li[@id=&apos;snd_6_14/02/2026&apos;]]
+Session ID: 39da1265d390bf1e87c3249bc6cde542
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
+	at pageObjects.FlightsPage.addTravelDetails(FlightsPage.java:82)
+	at testCases.HomePageTest.testValidDetails(HomePageTest.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_Test_Suite-class-failed -->
+          <div class="suite-All_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testCases.GiftCardTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGiftCardPurchaseFlow">
+                  </a> <!-- testGiftCardPurchaseFlow -->
+                  <span class="method-name">testGiftCardPurchaseFlow</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (a1e76806623d3a4738de976860a8bab2)] -&gt; xpath: //span[text()=&apos;Gift Card&apos;]] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\2457355\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64155}, goog:processID: 14136, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64155/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a1e76806623d3a4738de976860a8bab2
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pageObjects.HomePage.navigateToGiftCard(HomePage.java:41)
+	at testCases.GiftCardTest.testGiftCardPurchaseFlow(GiftCardTest.java:15)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 22 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_Test_Suite-class-failed -->
+          <div class="suite-All_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.HomePageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSameFromAndTo">
+                  </a> <!-- testSameFromAndTo -->
+                  <span class="method-name">testSameFromAndTo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSwitchCity">
+                  </a> <!-- testSwitchCity -->
+                  <span class="method-name">testSwitchCity</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateDefaultTravellerCount">
+                  </a> <!-- validateDefaultTravellerCount -->
+                  <span class="method-name">validateDefaultTravellerCount</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_Test_Suite-class-passed -->
+          <div class="suite-All_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="invalidMailCase">
+                  </a> <!-- invalidMailCase -->
+                  <span class="method-name">invalidMailCase</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="invalidPasswordCase">
+                  </a> <!-- invalidPasswordCase -->
+                  <span class="method-name">invalidPasswordCase</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validLoginTestCase">
+                  </a> <!-- validLoginTestCase -->
+                  <span class="method-name">validLoginTestCase</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_Test_Suite-class-passed -->
           <div class="suite-All_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -257,42 +431,28 @@
           <div class="suite-All_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testCases.HomePageTest</span>
+              <span class="class-name">testCases.GiftCardTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testRoundTripFunctionality">
-                  </a> <!-- testRoundTripFunctionality -->
-                  <span class="method-name">testRoundTripFunctionality</span>
+                  <a name="testInvalidAmount">
+                  </a> <!-- testInvalidAmount -->
+                  <span class="method-name">testInvalidAmount</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testSameFromAndTo">
-                  </a> <!-- testSameFromAndTo -->
-                  <span class="method-name">testSameFromAndTo</span>
+                  <a name="testLaterButton">
+                  </a> <!-- testLaterButton -->
+                  <span class="method-name">testLaterButton</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testSwitchCity">
-                  </a> <!-- testSwitchCity -->
-                  <span class="method-name">testSwitchCity</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testValidDetails">
-                  </a> <!-- testValidDetails -->
-                  <span class="method-name">testValidDetails</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="validateDefaultTravellerCount">
-                  </a> <!-- validateDefaultTravellerCount -->
-                  <span class="method-name">validateDefaultTravellerCount</span>
+                  <a name="testUnselectedLaterButton">
+                  </a> <!-- testUnselectedLaterButton -->
+                  <span class="method-name">testUnselectedLaterButton</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -348,71 +508,6 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-All_Test_Suite-class-passed -->
-          <div class="suite-All_Test_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testCases.GiftCardTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testGiftCardPurchaseFlow">
-                  </a> <!-- testGiftCardPurchaseFlow -->
-                  <span class="method-name">testGiftCardPurchaseFlow</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testInvalidAmount">
-                  </a> <!-- testInvalidAmount -->
-                  <span class="method-name">testInvalidAmount</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testLaterButton">
-                  </a> <!-- testLaterButton -->
-                  <span class="method-name">testLaterButton</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUnselectedLaterButton">
-                  </a> <!-- testUnselectedLaterButton -->
-                  <span class="method-name">testUnselectedLaterButton</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-All_Test_Suite-class-passed -->
-          <div class="suite-All_Test_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testCases.LoginTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="invalidMailCase">
-                  </a> <!-- invalidMailCase -->
-                  <span class="method-name">invalidMailCase</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="invalidPasswordCase">
-                  </a> <!-- invalidPasswordCase -->
-                  <span class="method-name">invalidPasswordCase</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="validLoginTestCase">
-                  </a> <!-- validLoginTestCase -->
-                  <span class="method-name">validLoginTestCase</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-All_Test_Suite-class-passed -->
         </div> <!-- panel All_Test_Suite -->
         <div panel-name="test-xml-All_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -427,6 +522,11 @@
     &lt;listener class-name=&quot;utilities.ExtentReportManager&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Run testNG&quot;&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;login&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testCases.LoginTest&quot;&gt;
         &lt;methods&gt;
@@ -496,6 +596,22 @@
             <span class="header-content">Groups for All Test Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">login</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">invalidMailCase</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">invalidPasswordCase</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">validLoginTestCase</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-All_Test_Suite" class="panel">
@@ -516,92 +632,92 @@ data.addRows(21);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'flightCaseTest')
 data.setCell(0, 2, 'testCases.FlightsTest')
-data.setCell(0, 3, 20712);
+data.setCell(0, 3, 30301);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'selectFlightDetailsCase')
-data.setCell(1, 2, 'testCases.FlightsTest')
-data.setCell(1, 3, 16750);
+data.setCell(1, 1, 'testSameFromAndTo')
+data.setCell(1, 2, 'testCases.HomePageTest')
+data.setCell(1, 3, 28137);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyMaxAdultCountFlow')
-data.setCell(2, 2, 'testCases.HotelsPageTest')
-data.setCell(2, 3, 14857);
+data.setCell(2, 1, 'verifyInvalidBookingDetails')
+data.setCell(2, 2, 'testCases.MyBookingTest')
+data.setCell(2, 3, 21418);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testGiftCardPurchaseFlow')
-data.setCell(3, 2, 'testCases.GiftCardTest')
-data.setCell(3, 3, 13379);
+data.setCell(3, 1, 'selectFlightDetailsCase')
+data.setCell(3, 2, 'testCases.FlightsTest')
+data.setCell(3, 3, 19116);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyInvalidBookingDetails')
-data.setCell(4, 2, 'testCases.MyBookingTest')
-data.setCell(4, 3, 10186);
+data.setCell(4, 1, 'testGiftCardPurchaseFlow')
+data.setCell(4, 2, 'testCases.GiftCardTest')
+data.setCell(4, 3, 16805);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testSameFromAndTo')
-data.setCell(5, 2, 'testCases.HomePageTest')
-data.setCell(5, 3, 9452);
+data.setCell(5, 1, 'testInvalidAmount')
+data.setCell(5, 2, 'testCases.GiftCardTest')
+data.setCell(5, 3, 15324);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'verifyAdultCountNotZero')
-data.setCell(6, 2, 'testCases.HotelsPageTest')
-data.setCell(6, 3, 7669);
+data.setCell(6, 1, 'payCases')
+data.setCell(6, 2, 'testCases.FlightsTest')
+data.setCell(6, 3, 13009);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'testRoundTripFunctionality')
-data.setCell(7, 2, 'testCases.HomePageTest')
-data.setCell(7, 3, 7286);
+data.setCell(7, 1, 'verifyAdultCountNotZero')
+data.setCell(7, 2, 'testCases.HotelsPageTest')
+data.setCell(7, 3, 11338);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'payCases')
-data.setCell(8, 2, 'testCases.FlightsTest')
-data.setCell(8, 3, 7115);
+data.setCell(8, 1, 'testLaterButton')
+data.setCell(8, 2, 'testCases.GiftCardTest')
+data.setCell(8, 3, 11280);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'testLaterButton')
-data.setCell(9, 2, 'testCases.GiftCardTest')
-data.setCell(9, 3, 7007);
+data.setCell(9, 1, 'verifyMaxAdultCountFlow')
+data.setCell(9, 2, 'testCases.HotelsPageTest')
+data.setCell(9, 3, 9999);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'testValidDetails')
-data.setCell(10, 2, 'testCases.HomePageTest')
-data.setCell(10, 3, 6766);
+data.setCell(10, 1, 'testUnselectedLaterButton')
+data.setCell(10, 2, 'testCases.GiftCardTest')
+data.setCell(10, 3, 9520);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'testUnselectedLaterButton')
-data.setCell(11, 2, 'testCases.GiftCardTest')
-data.setCell(11, 3, 6489);
+data.setCell(11, 1, 'testSwitchCity')
+data.setCell(11, 2, 'testCases.HomePageTest')
+data.setCell(11, 3, 7575);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'testInvalidAmount')
-data.setCell(12, 2, 'testCases.GiftCardTest')
-data.setCell(12, 3, 5798);
+data.setCell(12, 1, 'invalidPasswordCase')
+data.setCell(12, 2, 'testCases.LoginTest')
+data.setCell(12, 3, 6440);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'invalidPasswordCase')
-data.setCell(13, 2, 'testCases.LoginTest')
-data.setCell(13, 3, 4853);
+data.setCell(13, 1, 'verifyCheckInAndCheckOutAreNotSame')
+data.setCell(13, 2, 'testCases.HotelsPageTest')
+data.setCell(13, 3, 6164);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'verifyCheckInAndCheckOutAreNotSame')
+data.setCell(14, 1, 'verifyHotelsNavigation')
 data.setCell(14, 2, 'testCases.HotelsPageTest')
-data.setCell(14, 3, 4371);
+data.setCell(14, 3, 4501);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'testSwitchCity')
-data.setCell(15, 2, 'testCases.HomePageTest')
-data.setCell(15, 3, 3338);
+data.setCell(15, 1, 'invalidMailCase')
+data.setCell(15, 2, 'testCases.LoginTest')
+data.setCell(15, 3, 4445);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'invalidMailCase')
+data.setCell(16, 1, 'validLoginTestCase')
 data.setCell(16, 2, 'testCases.LoginTest')
-data.setCell(16, 3, 2708);
+data.setCell(16, 3, 4176);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'validLoginTestCase')
-data.setCell(17, 2, 'testCases.LoginTest')
-data.setCell(17, 3, 2216);
+data.setCell(17, 1, 'testValidDetails')
+data.setCell(17, 2, 'testCases.HomePageTest')
+data.setCell(17, 3, 3118);
 data.setCell(18, 0, 18)
 data.setCell(18, 1, 'selectEmptyCoupon')
 data.setCell(18, 2, 'testCases.FlightsTest')
-data.setCell(18, 3, 1834);
+data.setCell(18, 3, 1669);
 data.setCell(19, 0, 19)
-data.setCell(19, 1, 'verifyHotelsNavigation')
-data.setCell(19, 2, 'testCases.HotelsPageTest')
-data.setCell(19, 3, 1699);
+data.setCell(19, 1, 'testRoundTripFunctionality')
+data.setCell(19, 2, 'testCases.HomePageTest')
+data.setCell(19, 3, 1281);
 data.setCell(20, 0, 20)
 data.setCell(20, 1, 'validateDefaultTravellerCount')
 data.setCell(20, 2, 'testCases.HomePageTest')
-data.setCell(20, 3, 153);
+data.setCell(20, 3, 1218);
 window.suiteTableData['All_Test_Suite']= { tableData: data, tableDiv: 'times-div-All_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-All_Test_Suite">
               </div> <!-- times-div-All_Test_Suite -->
             </div> <!-- times-div -->
@@ -634,146 +750,152 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">invalidMailCase</span>
-                <span class="method-start">11377 ms</span>
+                <span class="method-start">16650 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">invalidPasswordCase</span>
-                <span class="method-start">14132 ms</span>
+                <span class="method-start">21151 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">validLoginTestCase</span>
-                <span class="method-start">18989 ms</span>
+                <span class="method-start">27597 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">21206 ms</span>
+                <span class="method-start">31780 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.HomePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">27568 ms</span>
+                <span class="method-start">40354 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">validateDefaultTravellerCount</span>
-                <span class="method-start">35991 ms</span>
+                <span class="method-start">57254 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testSameFromAndTo</span>
-                <span class="method-start">36144 ms</span>
+                <span class="method-start">58474 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testSwitchCity</span>
-                <span class="method-start">45604 ms</span>
+                <span class="method-start">86613 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testValidDetails</span>
-                <span class="method-start">48947 ms</span>
+                <span class="method-start">94192 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testRoundTripFunctionality</span>
-                <span class="method-start">55717 ms</span>
+                <span class="method-start">97324 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">63003 ms</span>
+                <span class="method-start">98605 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.FlightsTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">70445 ms</span>
+                <span class="method-start">105840 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">flightCaseTest</span>
-                <span class="method-start">79177 ms</span>
+                <span class="method-start">117706 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">selectEmptyCoupon</span>
-                <span class="method-start">99891 ms</span>
+                <span class="method-start">148016 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">selectFlightDetailsCase</span>
-                <span class="method-start">101730 ms</span>
+                <span class="method-start">149691 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">payCases</span>
-                <span class="method-start">118486 ms</span>
+                <span class="method-start">168872 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">125604 ms</span>
+                <span class="method-start">181881 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.GiftCardTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">133636 ms</span>
+                <span class="method-start">190577 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testGiftCardPurchaseFlow</span>
-                <span class="method-start">142423 ms</span>
+                <span class="method-start">202206 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testInvalidAmount</span>
-                <span class="method-start">155805 ms</span>
+                <span class="method-start">219015 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testLaterButton</span>
-                <span class="method-start">161603 ms</span>
+                <span class="method-start">234339 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testUnselectedLaterButton</span>
-                <span class="method-start">168619 ms</span>
+                <span class="method-start">245619 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">175108 ms</span>
+                <span class="method-start">255139 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.HotelsPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">183487 ms</span>
+                <span class="method-start">261816 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifyMaxAdultCountFlow</span>
-                <span class="method-start">192455 ms</span>
+                <span class="method-start">272584 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyHotelsNavigation</span>
-                <span class="method-start">207312 ms</span>
+                <span class="method-start">282586 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyAdultCountNotZero</span>
-                <span class="method-start">209011 ms</span>
+                <span class="method-start">287087 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyCheckInAndCheckOutAreNotSame</span>
-                <span class="method-start">216682 ms</span>
+                <span class="method-start">298425 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">221055 ms</span>
+                <span class="method-start">304591 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.MyBookingTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">228516 ms</span>
+                <span class="method-start">314737 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifyInvalidBookingDetails</span>
-                <span class="method-start">238470 ms</span>
+                <span class="method-start">328486 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">248656 ms</span>
+                <span class="method-start">349904 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

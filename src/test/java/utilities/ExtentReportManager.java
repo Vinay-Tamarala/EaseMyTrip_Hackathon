@@ -17,7 +17,7 @@ public class ExtentReportManager implements ITestListener {
         extent = new ExtentReports();
         extent.attachReporter(sparkReporter);
         extent.setSystemInfo("Environment", "QA");
-        extent.setSystemInfo("Tester", "PioletBatch");
+        extent.setSystemInfo("Tester", "PilotBatch");
     }
 
     public void onTestSuccess(ITestResult result) {

@@ -137,3 +137,198 @@
 2026-02-04 15:30:58 [main] INFO  Log - Test is passed to check whether the hotel navigation button is not failed to click
 2026-02-04 15:31:05 [main] INFO  Log - Check whether the max adult count is not zero by default
 2026-02-04 15:31:10 [main] INFO  Log - Test is passed to check whether the checkIn date and checkOut date is not same
+2026-02-04 16:26:45 [main] INFO  Log - Starting Login Test.
+2026-02-04 16:26:46 [main] INFO  Log - Entering Invalid Mail and Clicking on Continue.
+2026-02-04 16:26:46 [main] INFO  Log - Error is :* Enter a valid Email
+2026-02-04 16:26:47 [main] INFO  Log - Entering Valid Mail and Invalid Password and Clicking on Continue.
+2026-02-04 16:26:52 [main] INFO  Log - Error is :Please enter correct password.
+2026-02-04 16:26:53 [main] INFO  Log - Entering Valid Mail and Valid Password and Clicking on Continue.
+2026-02-04 16:27:10 [main] INFO  Log - Validated default traveller count.
+2026-02-04 16:27:35 [main] INFO  Log - Round trip flow executed successfully with From: New Delhi and To: Mumbai
+2026-02-04 16:28:04 [main] INFO  Log - Starting Flights Test.
+2026-02-04 16:28:14 [main] INFO  Log - Selecting Airline Filter.
+2026-02-04 16:28:23 [main] INFO  Log - Prices[₹ 4,999, ₹ 4,999, ₹ 4,999, ₹ 4,999, ₹ 4,999, ₹ 4,999, ₹ 4,999, ₹ 4,999, ₹ 4,999, ₹ 4,999, ₹ 5,844, ₹ 5,893, ₹ 5,893, ₹ 6,200, ₹ 6,200, ₹ 6,200, ₹ 6,200, ₹ 6,501, ₹ 6,501, ₹ 6,827, ₹ 7,013, ₹ 7,228, ₹ 7,317, ₹ 7,425, ₹ 7,491, ₹ 7,730, ₹ 8,084, ₹ 8,357, ₹ 8,512, ₹ 8,866, ₹ 8,866, ₹ 8,866, ₹ 8,866, ₹ 8,866, ₹ 8,866, ₹ 8,866, ₹ 8,866, ₹ 8,866, ₹ 10,619, ₹ 10,809, ₹ 10,809, ₹ 10,809, ₹ 10,809, ₹ 10,809, ₹ 10,809, ₹ 10,809, ₹ 10,809, ₹ 10,809, ₹ 10,925, ₹ 11,026, ₹ 11,026, ₹ 11,026, ₹ 11,026, ₹ 11,026, ₹ 11,026, ₹ 11,379, ₹ 11,702, ₹ 12,044, ₹ 12,540, ₹ 13,413, ₹ 13,594, ₹ 13,645, ₹ 14,378, ₹ 14,378, ₹ 14,584, ₹ 14,584, ₹ 14,584, ₹ 14,584, ₹ 14,786, ₹ 14,819, ₹ 14,943, ₹ 15,170, ₹ 15,286, ₹ 15,286, ₹ 15,684, ₹ 15,865, ₹ 16,044, ₹ 16,287, ₹ 16,287, ₹ 16,287, ₹ 16,287, ₹ 16,438, ₹ 16,617, ₹ 16,617, ₹ 16,702, ₹ 17,308, ₹ 17,308, ₹ 17,308, ₹ 18,278, ₹ 19,369, ₹ 20,112, ₹ 24,961, ₹ 25,677, ₹ 25,677, ₹ 25,677, ₹ 35,127, ₹ 35,127]
+2026-02-04 16:28:27 [main] INFO  Log - Selecting Empty Coupon.
+2026-02-04 16:28:28 [main] INFO  Log - Alert message is :Please enter coupon code
+2026-02-04 16:28:30 [main] INFO  Log - Filling Traveller Details.
+2026-02-04 16:28:46 [main] INFO  Log - Asserting Traveller Details.
+2026-02-04 16:30:07 [main] INFO  Log - Test is passed to check whether the adult count is more than 1
+2026-02-04 16:30:11 [main] INFO  Log - Test is passed to check whether the hotel navigation button is not failed to click
+2026-02-04 16:30:18 [main] INFO  Log - Check whether the max adult count is not zero by default
+2026-02-04 16:30:23 [main] INFO  Log - Test is passed to check whether the checkIn date and checkOut date is not same
+2026-02-04 18:34:28 [main] INFO  Log - Starting Flights Test.
+2026-02-04 18:34:33 [main] INFO  Log - Selecting Airline Filter.
+2026-02-04 18:34:40 [main] INFO  Log - Prices[₹ 4,999, ₹ 4,999, ₹ 4,999, ₹ 4,999, ₹ 4,999, ₹ 4,999, ₹ 4,999, ₹ 4,999, ₹ 4,999, ₹ 4,999, ₹ 4,999, ₹ 5,844, ₹ 5,893, ₹ 5,893, ₹ 6,200, ₹ 6,200, ₹ 6,200, ₹ 6,501, ₹ 6,501, ₹ 6,501, ₹ 6,677, ₹ 7,013, ₹ 7,228, ₹ 7,317, ₹ 7,491, ₹ 8,023, ₹ 8,084, ₹ 8,357, ₹ 8,357, ₹ 8,866, ₹ 8,866, ₹ 8,866, ₹ 8,866, ₹ 8,866, ₹ 8,866, ₹ 8,866, ₹ 8,866, ₹ 8,866, ₹ 10,619, ₹ 10,809, ₹ 10,809, ₹ 10,809, ₹ 10,809, ₹ 10,809, ₹ 10,809, ₹ 10,809, ₹ 10,809, ₹ 10,809, ₹ 10,925, ₹ 11,026, ₹ 11,026, ₹ 11,026, ₹ 11,026, ₹ 11,026, ₹ 11,026, ₹ 11,379, ₹ 11,702, ₹ 12,044, ₹ 12,540, ₹ 13,413, ₹ 13,594, ₹ 13,645, ₹ 14,378, ₹ 14,378, ₹ 14,517, ₹ 14,584, ₹ 14,584, ₹ 14,584, ₹ 14,584, ₹ 14,600, ₹ 14,786, ₹ 14,819, ₹ 14,943, ₹ 15,537, ₹ 15,865, ₹ 16,287, ₹ 16,287, ₹ 16,287, ₹ 16,287, ₹ 16,617, ₹ 16,617, ₹ 16,617, ₹ 16,617, ₹ 16,702, ₹ 16,804, ₹ 17,308, ₹ 17,308, ₹ 17,308, ₹ 18,278, ₹ 20,112, ₹ 21,633, ₹ 24,961, ₹ 25,677, ₹ 25,677, ₹ 25,677, ₹ 35,127, ₹ 35,127]
+2026-02-04 18:34:44 [main] INFO  Log - Selecting Empty Coupon.
+2026-02-04 18:34:45 [main] INFO  Log - Alert message is :Please enter coupon code
+2026-02-04 18:34:48 [main] INFO  Log - Filling Traveller Details.
+2026-02-04 18:35:03 [main] INFO  Log - Asserting Traveller Details.
+2026-02-04 18:36:12 [main] INFO  Log - Validated default traveller count.
+2026-02-04 18:36:39 [main] INFO  Log - Round trip flow executed successfully with From: New Delhi and To: Mumbai
+2026-02-04 18:37:03 [main] INFO  Log - Test is passed to check whether the adult count is more than 1
+2026-02-04 18:37:06 [main] INFO  Log - Test is passed to check whether the hotel navigation button is not failed to click
+2026-02-04 18:37:30 [main] INFO  Log - Test is passed to check whether the checkIn date and checkOut date is not same
+2026-02-04 18:37:42 [main] INFO  Log - Starting Login Test.
+2026-02-04 18:37:44 [main] INFO  Log - Entering Invalid Mail and Clicking on Continue.
+2026-02-04 18:37:44 [main] INFO  Log - Error is :* Enter a valid Email
+2026-02-04 18:37:45 [main] INFO  Log - Entering Valid Mail and Invalid Password and Clicking on Continue.
+2026-02-04 18:37:49 [main] INFO  Log - Error is :Please enter correct password.
+2026-02-04 18:37:50 [main] INFO  Log - Entering Valid Mail and Valid Password and Clicking on Continue.
+2026-02-04 21:53:39 [main] INFO  Log - Starting Login Test.
+2026-02-04 21:53:42 [main] INFO  Log - Entering Invalid Mail and Clicking on Continue.
+2026-02-04 21:53:43 [main] INFO  Log - Error is :* Enter a valid Email
+2026-02-04 21:53:44 [main] INFO  Log - Entering Valid Mail and Invalid Password and Clicking on Continue.
+2026-02-04 21:53:51 [main] INFO  Log - Error is :Please enter correct password.
+2026-02-04 21:53:52 [main] INFO  Log - Entering Valid Mail and Valid Password and Clicking on Continue.
+2026-02-04 21:54:18 [main] INFO  Log - Validated default traveller count.
+2026-02-04 21:54:59 [main] INFO  Log - Round trip flow executed successfully with From: New Delhi and To: Mumbai
+2026-02-04 21:55:25 [main] INFO  Log - Starting Flights Test.
+2026-02-04 21:55:29 [main] INFO  Log - Selecting Airline Filter.
+2026-02-04 21:55:36 [main] INFO  Log - Prices[₹ 4,999, ₹ 4,999, ₹ 4,999, ₹ 4,999, ₹ 4,999, ₹ 4,999, ₹ 4,999, ₹ 4,999, ₹ 4,999, ₹ 4,999, ₹ 5,844, ₹ 5,893, ₹ 5,893, ₹ 5,893, ₹ 6,200, ₹ 6,200, ₹ 6,501, ₹ 6,501, ₹ 6,501, ₹ 6,677, ₹ 6,827, ₹ 7,013, ₹ 7,228, ₹ 7,317, ₹ 7,491, ₹ 7,730, ₹ 8,023, ₹ 8,084, ₹ 8,357, ₹ 8,866, ₹ 8,866, ₹ 8,866, ₹ 8,866, ₹ 8,866, ₹ 8,866, ₹ 8,866, ₹ 8,866, ₹ 8,866, ₹ 8,866, ₹ 10,619, ₹ 10,809, ₹ 10,809, ₹ 10,809, ₹ 10,809, ₹ 10,925, ₹ 11,026, ₹ 11,026, ₹ 11,026, ₹ 11,026, ₹ 11,026, ₹ 11,026, ₹ 11,379, ₹ 11,578, ₹ 11,578, ₹ 12,044, ₹ 12,047, ₹ 12,540, ₹ 12,540, ₹ 12,809, ₹ 13,413, ₹ 13,594, ₹ 13,645, ₹ 14,018, ₹ 14,378, ₹ 14,378, ₹ 14,517, ₹ 14,584, ₹ 14,584, ₹ 14,584, ₹ 14,584, ₹ 14,786, ₹ 14,943, ₹ 15,170, ₹ 15,319, ₹ 15,684, ₹ 15,865, ₹ 16,287, ₹ 16,287, ₹ 16,287, ₹ 16,287, ₹ 16,438, ₹ 16,466, ₹ 16,617, ₹ 16,617, ₹ 16,617, ₹ 16,617, ₹ 16,702, ₹ 18,278, ₹ 20,112, ₹ 21,633, ₹ 24,102, ₹ 24,961, ₹ 25,677, ₹ 25,677, ₹ 25,677, ₹ 28,827, ₹ 35,127, ₹ 35,127]
+2026-02-04 21:55:41 [main] INFO  Log - Selecting Empty Coupon.
+2026-02-04 21:55:42 [main] INFO  Log - Alert message is :Please enter coupon code
+2026-02-04 21:55:44 [main] INFO  Log - Filling Traveller Details.
+2026-02-04 21:55:59 [main] INFO  Log - Asserting Traveller Details.
+2026-02-04 21:57:33 [main] INFO  Log - Test is passed to check whether the adult count is more than 1
+2026-02-04 21:57:36 [main] INFO  Log - Test is passed to check whether the hotel navigation button is not failed to click
+2026-02-04 21:57:45 [main] INFO  Log - Check whether the max adult count is not zero by default
+2026-02-04 21:57:49 [main] INFO  Log - Test is passed to check whether the checkIn date and checkOut date is not same
+2026-02-06 12:11:09 [main] INFO  Log - Starting Flights Test.
+2026-02-06 12:11:13 [main] INFO  Log - Selecting Airline Filter.
+2026-02-06 12:11:18 [main] INFO  Log - Prices[₹5,844, ₹5,844, ₹5,844, ₹5,844, ₹5,844, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹6,200, ₹6,200, ₹6,200, ₹6,200, ₹6,200, ₹6,501, ₹6,501, ₹7,074, ₹7,228, ₹7,373, ₹7,557, ₹7,730, ₹8,357, ₹8,568, ₹8,866, ₹8,866, ₹8,866, ₹8,866, ₹8,866, ₹8,866, ₹8,866, ₹8,866, ₹8,866, ₹9,605, ₹9,605, ₹10,619, ₹10,629, ₹10,809, ₹10,809, ₹10,809, ₹10,925, ₹11,379, ₹11,462, ₹11,462, ₹11,462, ₹12,044, ₹12,321, ₹12,321, ₹12,321, ₹12,321, ₹12,540, ₹12,540, ₹13,594, ₹14,018, ₹14,018, ₹14,378, ₹14,378, ₹14,473, ₹14,517, ₹14,584, ₹14,584, ₹14,584, ₹14,584, ₹14,600, ₹14,766, ₹14,786, ₹14,943, ₹15,319, ₹16,287, ₹16,287, ₹16,287, ₹16,287, ₹16,372, ₹16,617, ₹16,617, ₹16,617, ₹16,617, ₹16,617, ₹16,617, ₹16,702, ₹17,640, ₹20,527, ₹23,184, ₹24,102, ₹24,102, ₹24,961, ₹25,677, ₹25,677, ₹25,677, ₹28,827, ₹28,827, ₹30,695]
+2026-02-06 12:11:21 [main] INFO  Log - Selecting Empty Coupon.
+2026-02-06 12:11:23 [main] INFO  Log - Alert message is :Please enter coupon code
+2026-02-06 12:11:24 [main] INFO  Log - Filling Traveller Details.
+2026-02-06 12:11:38 [main] INFO  Log - Asserting Traveller Details.
+2026-02-06 12:12:25 [main] INFO  Log - Validated default traveller count.
+2026-02-06 12:12:42 [main] INFO  Log - Round trip flow executed successfully with From: New Delhi and To: Mumbai
+2026-02-06 12:12:59 [main] INFO  Log - Test is passed to check whether the adult count is more than 1
+2026-02-06 12:13:01 [main] INFO  Log - Test is passed to check whether the hotel navigation button is not failed to click
+2026-02-06 12:13:18 [main] INFO  Log - Test is passed to check whether the checkIn date and checkOut date is not same
+2026-02-06 12:13:23 [main] INFO  Log - Starting Login Test.
+2026-02-06 12:13:24 [main] INFO  Log - Entering Invalid Mail and Clicking on Continue.
+2026-02-06 12:13:24 [main] INFO  Log - Error is :* Enter a valid Email
+2026-02-06 12:13:24 [main] INFO  Log - Entering Valid Mail and Invalid Password and Clicking on Continue.
+2026-02-06 12:13:28 [main] INFO  Log - Error is :Please enter correct password.
+2026-02-06 12:13:28 [main] INFO  Log - Entering Valid Mail and Valid Password and Clicking on Continue.
+2026-02-06 12:24:42 [main] INFO  Log - Starting Login Test.
+2026-02-06 12:24:42 [main] INFO  Log - Entering Invalid Mail and Clicking on Continue.
+2026-02-06 12:24:42 [main] INFO  Log - Error is :* Enter a valid Email
+2026-02-06 12:24:43 [main] INFO  Log - Entering Valid Mail and Invalid Password and Clicking on Continue.
+2026-02-06 12:25:09 [main] INFO  Log - Validated default traveller count.
+2026-02-06 12:25:40 [main] INFO  Log - Starting Flights Test.
+2026-02-06 12:25:44 [main] INFO  Log - Selecting Airline Filter.
+2026-02-06 12:25:49 [main] INFO  Log - Prices[₹5,844, ₹5,844, ₹5,844, ₹5,844, ₹5,844, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹6,200, ₹6,200, ₹6,200, ₹6,200, ₹6,200, ₹6,200, ₹6,501, ₹6,501, ₹7,074, ₹7,228, ₹7,373, ₹7,557, ₹7,730, ₹8,357, ₹8,568, ₹8,866, ₹8,866, ₹8,866, ₹8,866, ₹8,866, ₹8,866, ₹8,866, ₹8,866, ₹8,866, ₹9,605, ₹9,605, ₹10,619, ₹10,629, ₹10,809, ₹10,809, ₹10,809, ₹10,925, ₹11,379, ₹11,462, ₹11,462, ₹11,462, ₹12,044, ₹12,321, ₹12,321, ₹12,321, ₹12,321, ₹12,540, ₹12,540, ₹13,594, ₹14,018, ₹14,018, ₹14,378, ₹14,378, ₹14,473, ₹14,517, ₹14,584, ₹14,584, ₹14,584, ₹14,584, ₹14,600, ₹14,766, ₹14,786, ₹14,943, ₹15,319, ₹16,287, ₹16,287, ₹16,287, ₹16,287, ₹16,372, ₹16,617, ₹16,617, ₹16,617, ₹16,617, ₹16,617, ₹16,617, ₹16,702, ₹17,640, ₹20,527, ₹23,184, ₹24,102, ₹24,102, ₹24,961, ₹25,677, ₹25,677, ₹25,677, ₹28,827, ₹28,827, ₹30,695]
+2026-02-06 12:25:53 [main] INFO  Log - Selecting Empty Coupon.
+2026-02-06 12:25:54 [main] INFO  Log - Alert message is :Please enter coupon code
+2026-02-06 12:25:56 [main] INFO  Log - Filling Traveller Details.
+2026-02-06 12:26:10 [main] INFO  Log - Asserting Traveller Details.
+2026-02-06 12:27:27 [main] INFO  Log - Test is passed to check whether the hotel navigation button is not failed to click
+2026-02-06 12:27:31 [main] INFO  Log - Check whether the max adult count is not zero by default
+2026-02-06 12:27:35 [main] INFO  Log - Test is passed to check whether the checkIn date and checkOut date is not same
+2026-02-06 12:29:57 [main] INFO  Log - Starting Login Test.
+2026-02-06 12:29:57 [main] INFO  Log - Starting Flights Test.
+2026-02-06 12:29:57 [main] INFO  Log - Asserting Traveller Details.
+2026-02-06 12:31:34 [main] INFO  Log - Starting Login Test.
+2026-02-06 12:31:34 [main] INFO  Log - Starting Flights Test.
+2026-02-06 12:31:34 [main] INFO  Log - Asserting Traveller Details.
+2026-02-06 15:21:05 [main] INFO  Log - Starting Login Test.
+2026-02-06 15:21:05 [main] INFO  Log - Starting Flights Test.
+2026-02-06 15:21:05 [main] INFO  Log - Asserting Traveller Details.
+2026-02-06 15:23:23 [main] INFO  Log - Starting Login Test.
+2026-02-06 15:23:23 [main] INFO  Log - Starting Flights Test.
+2026-02-06 15:23:23 [main] INFO  Log - Asserting Traveller Details.
+2026-02-06 16:43:50 [main] INFO  Log - Starting Login Test.
+2026-02-06 16:43:50 [main] INFO  Log - Starting Flights Test.
+2026-02-06 16:43:50 [main] INFO  Log - Asserting Traveller Details.
+2026-02-06 16:45:41 [main] INFO  Log - Starting Login Test.
+2026-02-06 16:45:41 [main] INFO  Log - Starting Flights Test.
+2026-02-06 16:45:41 [main] INFO  Log - Asserting Traveller Details.
+2026-02-06 16:47:43 [main] INFO  Log - Starting Login Test.
+2026-02-06 16:47:49 [main] INFO  Log - Entering Invalid Mail and Clicking on Continue.
+2026-02-06 16:47:50 [main] INFO  Log - Error is :* Enter a valid Email
+2026-02-06 16:47:50 [main] INFO  Log - Entering Valid Mail and Invalid Password and Clicking on Continue.
+2026-02-06 16:47:55 [main] INFO  Log - Error is :Please enter correct password.
+2026-02-06 16:47:55 [main] INFO  Log - Entering Valid Mail and Valid Password and Clicking on Continue.
+2026-02-06 16:49:34 [main] INFO  Log - Starting Login Test.
+2026-02-06 16:49:35 [main] INFO  Log - Entering Invalid Mail and Clicking on Continue.
+2026-02-06 16:49:36 [main] INFO  Log - Error is :* Enter a valid Email
+2026-02-06 16:49:36 [main] INFO  Log - Entering Valid Mail and Invalid Password and Clicking on Continue.
+2026-02-06 16:49:41 [main] INFO  Log - Error is :Please enter correct password.
+2026-02-06 16:49:42 [main] INFO  Log - Entering Valid Mail and Valid Password and Clicking on Continue.
+2026-02-06 16:54:08 [main] INFO  Log - Starting Login Test.
+2026-02-06 16:54:09 [main] INFO  Log - Entering Invalid Mail and Clicking on Continue.
+2026-02-06 16:54:09 [main] INFO  Log - Error is :* Enter a valid Email
+2026-02-06 16:54:10 [main] INFO  Log - Entering Valid Mail and Invalid Password and Clicking on Continue.
+2026-02-06 16:54:14 [main] INFO  Log - Error is :Please enter correct password.
+2026-02-06 16:54:15 [main] INFO  Log - Entering Valid Mail and Valid Password and Clicking on Continue.
+2026-02-06 16:54:31 [main] INFO  Log - Validated default traveller count.
+2026-02-06 16:54:53 [main] INFO  Log - Round trip flow executed successfully with From: New Delhi and To: Mumbai
+2026-02-06 16:55:17 [main] INFO  Log - Starting Flights Test.
+2026-02-06 16:55:31 [main] INFO  Log - Selecting Airline Filter.
+2026-02-06 16:55:41 [main] INFO  Log - Prices[₹5,844, ₹5,844, ₹5,844, ₹5,844, ₹5,844, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹6,200, ₹6,200, ₹6,200, ₹6,200, ₹6,200, ₹6,200, ₹6,200, ₹6,501, ₹7,228, ₹7,373, ₹7,491, ₹7,557, ₹7,730, ₹8,078, ₹8,357, ₹8,866, ₹8,866, ₹8,866, ₹8,866, ₹8,866, ₹8,866, ₹8,866, ₹8,866, ₹9,605, ₹9,605, ₹9,605, ₹9,605, ₹10,809, ₹10,809, ₹10,809, ₹10,925, ₹10,987, ₹11,379, ₹11,462, ₹11,462, ₹11,462, ₹12,044, ₹12,321, ₹12,321, ₹12,321, ₹12,321, ₹12,540, ₹12,540, ₹13,969, ₹14,018, ₹14,018, ₹14,378, ₹14,378, ₹14,473, ₹14,517, ₹14,584, ₹14,600, ₹14,766, ₹14,786, ₹14,943, ₹15,319, ₹15,478, ₹15,505, ₹16,287, ₹16,287, ₹16,287, ₹16,287, ₹16,617, ₹16,617, ₹16,617, ₹16,702, ₹16,745, ₹16,857, ₹16,857, ₹20,527, ₹20,548, ₹22,482, ₹22,482, ₹22,482, ₹23,184, ₹24,102, ₹24,102, ₹24,961, ₹25,677, ₹25,677, ₹25,677, ₹28,827, ₹28,827, ₹30,695]
+2026-02-06 16:55:46 [main] INFO  Log - Selecting Empty Coupon.
+2026-02-06 16:55:47 [main] INFO  Log - Alert message is :Please enter coupon code
+2026-02-06 16:55:49 [main] INFO  Log - Filling Traveller Details.
+2026-02-06 16:56:05 [main] INFO  Log - Asserting Traveller Details.
+2026-02-06 16:57:29 [main] INFO  Log - Test is passed to check whether the adult count is more than 1
+2026-02-06 16:57:32 [main] INFO  Log - Test is passed to check whether the hotel navigation button is not failed to click
+2026-02-06 16:57:40 [main] INFO  Log - Check whether the max adult count is not zero by default
+2026-02-06 16:57:44 [main] INFO  Log - Test is passed to check whether the checkIn date and checkOut date is not same
+2026-02-06 17:00:51 [main] INFO  Log - Starting Login Test.
+2026-02-06 17:00:51 [main] INFO  Log - Starting Flights Test.
+2026-02-06 17:00:51 [main] INFO  Log - Asserting Traveller Details.
+2026-02-07 22:16:16 [main] INFO  Log - Starting Flights Test.
+2026-02-07 22:16:23 [main] INFO  Log - Selecting Airline Filter.
+2026-02-07 22:16:33 [main] INFO  Log - Prices[₹5,844, ₹5,844, ₹5,844, ₹5,844, ₹5,844, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹6,200, ₹6,200, ₹6,200, ₹6,200, ₹6,200, ₹6,200, ₹6,501, ₹6,677, ₹6,677, ₹6,827, ₹6,827, ₹7,074, ₹7,228, ₹7,474, ₹7,557, ₹7,730, ₹7,788, ₹8,866, ₹8,866, ₹8,866, ₹8,866, ₹8,866, ₹9,295, ₹9,605, ₹9,605, ₹10,629, ₹10,809, ₹10,809, ₹10,809, ₹10,809, ₹10,809, ₹10,809, ₹10,809, ₹10,925, ₹10,987, ₹11,379, ₹11,462, ₹11,462, ₹11,462, ₹11,462, ₹11,462, ₹11,462, ₹11,462, ₹11,462, ₹11,578, ₹11,901, ₹12,044, ₹12,321, ₹12,321, ₹12,321, ₹12,321, ₹12,321, ₹12,321, ₹12,321, ₹12,939, ₹13,741, ₹13,969, ₹14,315, ₹14,378, ₹14,473, ₹14,517, ₹14,584, ₹14,786, ₹14,943, ₹15,319, ₹16,199, ₹16,287, ₹16,287, ₹16,287, ₹16,287, ₹16,702, ₹16,745, ₹16,857, ₹17,308, ₹17,308, ₹20,548, ₹20,952, ₹20,967, ₹22,482, ₹22,482, ₹22,482, ₹22,482, ₹22,482, ₹22,482, ₹22,820, ₹22,820, ₹24,102, ₹24,102, ₹24,961, ₹25,677, ₹25,677, ₹25,677, ₹28,827, ₹35,127, ₹35,127]
+2026-02-07 22:16:37 [main] INFO  Log - Selecting Empty Coupon.
+2026-02-07 22:16:39 [main] INFO  Log - Alert message is :Please enter coupon code
+2026-02-07 22:16:40 [main] INFO  Log - Filling Traveller Details.
+2026-02-07 22:16:55 [main] INFO  Log - Asserting Traveller Details.
+2026-02-07 22:17:58 [main] INFO  Log - Validated default traveller count.
+2026-02-07 22:18:28 [main] INFO  Log - Round trip flow executed successfully with From: New Delhi and To: Mumbai
+2026-02-07 22:18:59 [main] INFO  Log - Test is passed to check whether the adult count is more than 1
+2026-02-07 22:19:02 [main] INFO  Log - Test is passed to check whether the hotel navigation button is not failed to click
+2026-02-07 22:19:22 [main] INFO  Log - Test is passed to check whether the checkIn date and checkOut date is not same
+2026-02-07 22:19:30 [main] INFO  Log - Starting Login Test.
+2026-02-07 22:19:32 [main] INFO  Log - Entering Invalid Mail and Clicking on Continue.
+2026-02-07 22:19:32 [main] INFO  Log - Error is :* Enter a valid Email
+2026-02-07 22:19:32 [main] INFO  Log - Entering Valid Mail and Invalid Password and Clicking on Continue.
+2026-02-07 22:19:36 [main] INFO  Log - Error is :Please enter correct password.
+2026-02-07 22:19:37 [main] INFO  Log - Entering Valid Mail and Valid Password and Clicking on Continue.
+2026-02-07 22:22:04 [main] INFO  Log - Starting Login Test.
+2026-02-07 22:22:04 [main] INFO  Log - Starting Flights Test.
+2026-02-07 22:22:04 [main] INFO  Log - Asserting Traveller Details.
+2026-02-07 22:31:22 [main] INFO  Log - Starting Login Test.
+2026-02-07 22:31:23 [main] INFO  Log - Entering Invalid Mail and Clicking on Continue.
+2026-02-07 22:31:23 [main] INFO  Log - Error is :* Enter a valid Email
+2026-02-07 22:31:24 [main] INFO  Log - Entering Valid Mail and Invalid Password and Clicking on Continue.
+2026-02-07 22:31:28 [main] INFO  Log - Error is :Please enter correct password.
+2026-02-07 22:31:28 [main] INFO  Log - Entering Valid Mail and Valid Password and Clicking on Continue.
+2026-02-07 22:31:52 [main] INFO  Log - Validated default traveller count.
+2026-02-07 22:32:55 [main] INFO  Log - Round trip flow executed successfully with From: New Delhi and To: Mumbai
+2026-02-07 22:33:27 [main] INFO  Log - Starting Flights Test.
+2026-02-07 22:33:48 [main] INFO  Log - Selecting Airline Filter.
+2026-02-07 22:33:54 [main] INFO  Log - Prices[, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ]
+2026-02-07 22:34:01 [main] INFO  Log - Selecting Empty Coupon.
+2026-02-07 22:34:02 [main] INFO  Log - Alert message is :Please enter coupon code
+2026-02-07 22:34:04 [main] INFO  Log - Filling Traveller Details.
+2026-02-07 22:34:19 [main] INFO  Log - Asserting Traveller Details.
+2026-02-07 22:45:22 [main] INFO  Log - Starting Login Test.
+2026-02-07 22:45:23 [main] INFO  Log - Entering Invalid Mail and Clicking on Continue.
+2026-02-07 22:45:24 [main] INFO  Log - Error is :* Enter a valid Email
+2026-02-07 22:45:25 [main] INFO  Log - Entering Valid Mail and Invalid Password and Clicking on Continue.
+2026-02-07 22:45:30 [main] INFO  Log - Error is :Please enter correct password.
+2026-02-07 22:45:32 [main] INFO  Log - Entering Valid Mail and Valid Password and Clicking on Continue.
+2026-02-07 22:46:02 [main] INFO  Log - Validated default traveller count.
+2026-02-07 22:47:01 [main] INFO  Log - Starting Flights Test.
+2026-02-07 22:47:16 [main] INFO  Log - Selecting Airline Filter.
+2026-02-07 22:47:26 [main] INFO  Log - Prices[₹5,844, ₹5,844, ₹5,844, ₹5,844, ₹5,844, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹5,893, ₹6,200, ₹6,200, ₹6,200, ₹6,200, ₹6,200, ₹6,200, ₹6,501, ₹6,677, ₹6,677, ₹6,827, ₹6,827, ₹7,074, ₹7,228, ₹7,474, ₹7,557, ₹7,730, ₹7,788, ₹8,866, ₹8,866, ₹8,866, ₹8,866, ₹8,866, ₹9,295, ₹9,605, ₹9,605, ₹10,629, ₹10,809, ₹10,809, ₹10,809, ₹10,809, ₹10,809, ₹10,809, ₹10,809, ₹10,925, ₹10,987, ₹11,379, ₹11,462, ₹11,462, ₹11,462, ₹11,462, ₹11,462, ₹11,462, ₹11,462, ₹11,462, ₹11,578, ₹11,901, ₹12,044, ₹12,321, ₹12,321, ₹12,321, ₹12,321, ₹12,321, ₹12,321, ₹12,321, ₹12,939, ₹13,741, ₹13,969, ₹14,315, ₹14,378, ₹14,473, ₹14,517, ₹14,584, ₹14,786, ₹14,943, ₹15,319, ₹16,199, ₹16,287, ₹16,287, ₹16,287, ₹16,287, ₹16,702, ₹16,745, ₹16,857, ₹17,308, ₹17,308, ₹20,548, ₹20,952, ₹20,967, ₹22,482, ₹22,482, ₹22,482, ₹22,482, ₹22,482, ₹22,482, ₹22,820, ₹22,820, ₹24,102, ₹24,102, ₹24,961, ₹25,677, ₹25,677, ₹25,677, ₹28,827, ₹35,127, ₹35,127]
+2026-02-07 22:47:32 [main] INFO  Log - Selecting Empty Coupon.
+2026-02-07 22:47:33 [main] INFO  Log - Alert message is :Please enter coupon code
+2026-02-07 22:47:35 [main] INFO  Log - Filling Traveller Details.
+2026-02-07 22:47:52 [main] INFO  Log - Asserting Traveller Details.
+2026-02-07 22:49:46 [main] INFO  Log - Test is passed to check whether the adult count is more than 1
+2026-02-07 22:49:50 [main] INFO  Log - Test is passed to check whether the hotel navigation button is not failed to click
+2026-02-07 22:50:02 [main] INFO  Log - Check whether the max adult count is not zero by default
+2026-02-07 22:50:08 [main] INFO  Log - Test is passed to check whether the checkIn date and checkOut date is not same
