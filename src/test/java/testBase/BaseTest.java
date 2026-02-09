@@ -28,7 +28,7 @@ public class BaseTest {
     protected MyBookingPage myBookingPage;
     public CommonCode cc;
 
-    @BeforeClass(alwaysRun = true)
+    @BeforeClass
     public void setUp() {
         String browser = ConfigReader.getProperty("browser").toLowerCase();
         String baseUrl = ConfigReader.getProperty("baseUrl");
@@ -60,7 +60,7 @@ public class BaseTest {
         checkLocators = new CheckOutPage(driver,wait);
         payLocators = new PayPage(driver,wait);
         loginLocators = new LoginPage(driver,wait);
-        homePageVc = new Home(driver);
+        homePageVc = new Home(driver,wait);
         flights = new FlightsPage(driver,wait);
         myBookingPage = new MyBookingPage(driver,wait);
         cc= new CommonCode(driver);
