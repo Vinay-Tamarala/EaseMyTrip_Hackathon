@@ -43,7 +43,7 @@ public class FlightPage extends DriverInitialization {
             driver.findElement(By.xpath("//div[contains(normalize-space(text()),'" + ConfigReader.getProperty("type") + "')]")).click();
             driver.findElement(By.xpath("//div[contains(normalize-space(@class),'fareheader') and contains(normalize-space(text()),'" + ConfigReader.getProperty("Value") + "')]//ancestor::label//a[text()=' Book Now ']")).click();
         }
-        catch (ElementNotInteractableException e)
+        catch (Exception e)
         {
             driver.findElement(By.xpath("(//a[text()=' Book Now '])[1]")).click();
         }
