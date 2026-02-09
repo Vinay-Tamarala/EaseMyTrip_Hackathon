@@ -4,12 +4,13 @@
     <listeners>
         <listener class-name="utilities.ExtentReportManager"/>
     </listeners>
-    <test name="Run testNG">
-        <groups>
-            <run>
-                <include name="login"/>
-            </run>
-        </groups>
+<!--    <test name="Run testNG" thread-count="5" parallel="classes">-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="login"/>-->
+<!--            </run>-->
+<!--        </groups>-->
+        <test name="Run testNG">
         <classes>
             <class name="testCases.LoginTest">
                 <methods>

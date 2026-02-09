@@ -9,19 +9,18 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class Home {
+public class Home extends DriverInitialization{
 
-    WebDriver driver;
-    public Home(WebDriver driver){
-        this.driver = driver;
-        PageFactory.initElements(driver,this);
+    WebDriverWait wait;
+    public Home(WebDriver driver, WebDriverWait wait){
+        super(driver);
+        this.wait=wait;
     }
 
     @FindBy(xpath = "//span[ @class ='meuicowidth flightmenuico']")
-    WebElement cabs;
+    WebElement flight;
 
     public void toFlightsPage(){
-        WebDriverWait wait  = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(cabs)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(flight)).click();
     }
 }
