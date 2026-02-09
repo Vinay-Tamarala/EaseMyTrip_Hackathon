@@ -1,7 +1,9 @@
 package testBase;
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -44,11 +46,16 @@ public class BaseTest {
                 break;
             case "chrome":
             default:
-                driver = new ChromeDriver();
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--headless");
+                options.addArguments("--start-maximized");
+                options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) " + "AppleWebKit/537.36 (KHTML, like Gecko) " + "Chrome/142.0.0.0 Safari/537.36");
+                driver = new ChromeDriver(options);
                 break;
         }
+        driver.manage().window().setSize(new Dimension(1920, 1080));
 
-        driver.manage().window().maximize();
+//        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWait));
         wait = new WebDriverWait(driver, Duration.ofSeconds(explicitWait));
 

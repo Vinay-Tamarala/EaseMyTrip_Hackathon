@@ -9,6 +9,7 @@ public class HotelsPageTest extends BaseTest {
 
     @Test(priority = 1)
     public void verifyMaxAdultCountFlow() {
+        cc.takeScreenShot("hotelSelection");
         hotelsPage.navigateToHotels();
         hotelsPage.hotelAction();
         int max = hotelsPage.getMaxAdultCount();

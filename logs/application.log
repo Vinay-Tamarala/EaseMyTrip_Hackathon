@@ -485,3 +485,11 @@
 2026-02-09 12:35:28 [main] INFO  Log - Test is passed to check whether the hotel navigation button is not failed to click
 2026-02-09 12:35:37 [main] INFO  Log - Check whether the max adult count is not zero by default
 2026-02-09 12:35:40 [main] INFO  Log - Test is passed to check whether the checkIn date and checkOut date is not same
+2026-02-09 14:10:52 [main] INFO  Log - Test is passed to check whether the adult count is more than 1
+2026-02-09 14:10:54 [main] INFO  Log - Test is passed to check whether the hotel navigation button is not failed to click
+2026-02-09 14:11:02 [main] INFO  Log - Check whether the max adult count is not zero by default
+2026-02-09 14:11:07 [main] INFO  Log - Test is passed to check whether the checkIn date and checkOut date is not same
+2026-02-09 14:30:27 [main] INFO  Log - Test is passed to check whether the adult count is more than 1
+2026-02-09 14:30:29 [main] INFO  Log - Test is passed to check whether the hotel navigation button is not failed to click
+2026-02-09 14:30:36 [main] INFO  Log - Check whether the max adult count is not zero by default
+2026-02-09 14:30:44 [main] INFO  Log - Test is passed to check whether the checkIn date and checkOut date is not same
